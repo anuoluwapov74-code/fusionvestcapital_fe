@@ -32,7 +32,7 @@ const Navbar = () => {
 
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <span className="text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white transition-opacity group-hover:opacity-80">
+            <span className="text-base sm:text-xl lg:text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white transition-opacity group-hover:opacity-80">
               FusionVest<span className="text-[#000080] dark:text-[#50C878]">Capital</span>
             </span>
           </Link>
