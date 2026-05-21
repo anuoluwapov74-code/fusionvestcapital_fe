@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import BrandLogo from "@/components/BrandLogo";
 import {
   Home,
   Users,
@@ -127,9 +128,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           {/* Header */}
           <div className="flex items-center justify-between p-5 border-b border-gray-200 dark:border-white/10">
             <Link href="/portfolio" className="flex items-center">
-              <span className="text-xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-                FusionVest<span className="text-[#000080] dark:text-[#50C878]">Capital</span>
-              </span>
+              <BrandLogo imageSize="h-8 w-8" textSize="text-lg" />
             </Link>
 
             <button

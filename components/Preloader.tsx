@@ -1,12 +1,12 @@
 ﻿"use client";
 
+import BrandLogo from "@/components/BrandLogo";
+
 export default function Preloader() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-[#f5f5ff] dark:bg-gradient-to-br dark:from-[#00002e] dark:via-[#000020] dark:to-[#000012]">
       <div className="mb-12">
-        <span className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white select-none">
-          FusionVest<span className="text-[#000080] dark:text-[#50C878]">Capital</span>
-        </span>
+        <BrandLogo imageSize="h-12 w-12 sm:h-14 sm:w-14" textSize="text-2xl sm:text-3xl" />
       </div>
 
       {/* Spinner */}

@@ -10,6 +10,7 @@ import { toast } from "sonner";
 import { PulseLoader } from "react-spinners";
 import Link from "next/link";
 import PagePreloader from "@/components/PagePreloader";
+import BrandLogo from "@/components/BrandLogo";
 
 function Verify2FAContent() {
   const [code, setCode] = useState(["", "", "", ""]);
@@ -116,10 +117,8 @@ function Verify2FAContent() {
           className="w-full max-w-md space-y-6 text-center"
         >
           {/* Logo */}
-          <Link href="/" className="inline-block mb-4">
-            <span className="text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-              FusionVest<span className="text-[#000080] dark:text-[#50C878]">Capital</span>
-            </span>
+          <Link href="/" className="inline-flex justify-center mb-4">
+            <BrandLogo imageSize="h-10 w-10 sm:h-11 sm:w-11" textSize="text-xl sm:text-2xl" />
           </Link>
 
           <div className="w-20 h-20 bg-[#000080]/8 dark:bg-[#50C878]/15 rounded-full flex items-center justify-center mx-auto">

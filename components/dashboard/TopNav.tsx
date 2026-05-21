@@ -22,6 +22,7 @@ import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 import NotificationDropdown from "./portfolio/NotificationDropdown";
 import UserProfileMenu from "./portfolio/UserProfileMenu";
 import { apiFetch } from "@/lib/api";
@@ -113,9 +114,7 @@ export default function TopNav({ onMenuClick, user }: TopNavProps) {
 
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-              FusionVest<span className="text-[#000080] dark:text-[#50C878]">Capital</span>
-            </span>
+            <BrandLogo mobileImageOnly imageSize="h-8 w-8" textSize="text-lg xl:text-xl" />
           </Link>
 
           {/* Desktop Nav Links */}

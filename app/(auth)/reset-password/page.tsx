@@ -13,6 +13,7 @@ import { apiFetch } from "@/lib/api";
 import { toast } from "sonner";
 import { PulseLoader } from "react-spinners";
 import PagePreloader from "@/components/PagePreloader";
+import BrandLogo from "@/components/BrandLogo";
 
 const resetPasswordSchema = z
   .object({
@@ -241,9 +242,7 @@ function ResetPasswordContent() {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <span className="text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-            FusionVest<span className="text-[#000080] dark:text-[#50C878]">Capital</span>
-          </span>
+          <BrandLogo imageSize="h-10 w-10 sm:h-11 sm:w-11" textSize="text-xl sm:text-2xl" />
         </Link>
 
         <div className="space-y-2">

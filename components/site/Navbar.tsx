@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import BrandLogo from "@/components/BrandLogo";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
@@ -31,10 +32,12 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between lg:h-20">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center group">
-            <span className="text-base sm:text-xl lg:text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white transition-opacity group-hover:opacity-80">
-              FusionVest<span className="text-[#000080] dark:text-[#50C878]">Capital</span>
-            </span>
+          <Link href="/" className="flex items-center group transition-opacity hover:opacity-80">
+            <BrandLogo
+              mobileImageOnly
+              imageSize="h-8 w-8 lg:h-9 lg:w-9"
+              textSize="text-xl lg:text-2xl"
+            />
           </Link>
 
           {/* Desktop Navigation */}

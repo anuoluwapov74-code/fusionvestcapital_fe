@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { apiFetch } from "@/lib/api";
+import BrandLogo from "@/components/BrandLogo";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { PulseLoader } from "react-spinners";
@@ -94,13 +95,8 @@ export default function LoginPage() {
           transition={{ duration: 0.6 }}
           className="w-full max-w-sm space-y-6 flex flex-col"
         >
-          <Link
-            href="/"
-            className="flex mb-10 self-center tracking-tight items-center justify-center"
-          >
-            <span className="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white">
-              FusionVest<span className="text-[#000080] dark:text-[#50C878]">Capital</span>
-            </span>
+          <Link href="/" className="flex mb-10 self-center items-center justify-center">
+            <BrandLogo imageSize="h-10 w-10 sm:h-11 sm:w-11" textSize="text-xl sm:text-2xl" />
           </Link>
 
           <div className="flex items-center justify-between">

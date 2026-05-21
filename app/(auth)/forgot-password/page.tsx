@@ -12,6 +12,7 @@ import { apiFetch } from "@/lib/api";
 import { toast } from "sonner";
 import { PulseLoader } from "react-spinners";
 import PagePreloader from "@/components/PagePreloader";
+import BrandLogo from "@/components/BrandLogo";
 
 const forgotPasswordSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -116,13 +117,8 @@ export default function ForgotPasswordPage() {
         className="w-full max-w-md space-y-6"
       >
         {/* Logo */}
-        <Link
-          href="/"
-          className="flex font-extrabold justify-center"
-        >
-          <span className="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-            FusionVest<span className="text-[#000080] dark:text-[#50C878]">Capital</span>
-          </span>
+        <Link href="/" className="flex justify-center">
+          <BrandLogo imageSize="h-10 w-10 sm:h-11 sm:w-11" textSize="text-xl sm:text-2xl" />
         </Link>
 
         <div className="space-y-2">
