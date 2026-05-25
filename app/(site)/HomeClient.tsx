@@ -312,7 +312,7 @@ const StatBar = () => {
 
   return (
     <motion.section
-      className="bg-[#000080] py-0"
+      className="bg-[#00001e] py-0"
       variants={fadeIn}
       initial="hidden"
       whileInView="visible"
@@ -1076,7 +1076,7 @@ const Team = () => {
 
 const FinalCTA = () => (
   <section className="relative overflow-hidden py-28 lg:py-40">
-    <div className="absolute inset-0 bg-gradient-to-br from-[#000080] via-[#00009a] to-[#000060]" />
+    <div className="absolute inset-0 bg-gradient-to-br from-[#00001e] via-[#000028] to-[#000018]" />
     <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#50C878]/10 rounded-full blur-[180px] pointer-events-none" />
     <div className="absolute bottom-0 left-0 w-[500px] h-[400px] bg-[#000040]/60 rounded-full blur-[150px] pointer-events-none" />
     <div
