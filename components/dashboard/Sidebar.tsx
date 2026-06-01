@@ -32,7 +32,7 @@ const walletSection = [
 ];
 
 const tradingSection = [
-  { name: "Markets", href: "/stock", icon: BarChart3 },
+  // { name: "Markets", href: "/stock", icon: BarChart3 },
   { name: "Live Trade", href: "/live-trading", icon: Radio },
   { name: "Signals", href: "/signals", icon: TrendingUp },
   { name: "Trade History", href: "/trade-history", icon: History },
