@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import {
@@ -369,7 +369,7 @@ export default function ExploreTraders() {
             {/* Loading */}
             {loading && (
               <div className="flex justify-center items-center py-20">
-                <PulseLoader color="#3b82f6" size={15} />
+                <PulseLoader color="#10b981" size={15} />
               </div>
             )}
 
@@ -700,7 +700,7 @@ export default function ExploreTraders() {
                   {/* Progress bar under tabs */}
                   <div className="h-1 bg-gray-200 dark:bg-gray-700 rounded-full mb-6 overflow-hidden">
                     <div
-                      className="h-full bg-blue-500 rounded-full transition-all duration-300"
+                      className="h-full bg-emerald-500 rounded-full transition-all duration-300"
                       style={{
                         width: `${
                           ((categories.findIndex(
@@ -725,7 +725,7 @@ export default function ExploreTraders() {
                       </p>
                       <button
                         onClick={() => setActiveCategory("all")}
-                        className="mt-3 text-sm text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-medium transition-colors"
+                        className="mt-3 text-sm text-emerald-500 hover:text-emerald-600 dark:text-emerald-400 dark:hover:text-emerald-300 font-medium transition-colors"
                       >
                         View all categories
                       </button>

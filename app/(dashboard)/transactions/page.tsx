@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -72,7 +72,7 @@ export default function TransactionHistoryPage() {
             onClick={() => setFilter(f)}
             className={`px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors ${
               filter === f
-                ? "bg-blue-500 text-white shadow-sm"
+                ? "bg-emerald-500 text-white shadow-sm"
                 : "bg-white/90 dark:bg-[#1a2744]/80 border border-gray-200/50 dark:border-white/10 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/5"
             }`}
           >
@@ -90,7 +90,7 @@ export default function TransactionHistoryPage() {
       >
         {loading ? (
           <div className="flex items-center justify-center py-16">
-            <Loader2 className="w-8 h-8 text-blue-400 animate-spin" />
+            <Loader2 className="w-8 h-8 text-emerald-400 animate-spin" />
           </div>
         ) : transactions.length === 0 ? (
           <div className="text-center py-16">

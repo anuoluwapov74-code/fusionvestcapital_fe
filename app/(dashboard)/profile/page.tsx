@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
@@ -68,7 +68,7 @@ export default function ProfilePage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
+        <Loader2 className="w-8 h-8 text-emerald-500 animate-spin" />
       </div>
     );
   }
@@ -96,7 +96,7 @@ export default function ProfilePage() {
           </div>
           <button
             onClick={() => router.push("/settings")}
-            className="flex items-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
+            className="flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors"
           >
             <Settings className="w-4 h-4" />
             Edit Settings
@@ -108,7 +108,7 @@ export default function ProfilePage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-6 text-white"
+            className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl p-6 text-white"
           >
             <div className="flex items-center gap-3 mb-2">
               <DollarSign className="w-5 h-5" />
@@ -174,8 +174,8 @@ export default function ProfilePage() {
 
             <div className="space-y-4">
               <div className="flex items-start gap-4">
-                <div className="p-2 bg-blue-500/10 dark:bg-blue-500/20 rounded-lg">
-                  <User className="w-5 h-5 text-blue-600" />
+                <div className="p-2 bg-emerald-500/10 dark:bg-emerald-500/20 rounded-lg">
+                  <User className="w-5 h-5 text-emerald-600" />
                 </div>
                 <div className="flex-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
@@ -188,8 +188,8 @@ export default function ProfilePage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="p-2 bg-blue-500/10 dark:bg-blue-500/20 rounded-lg">
-                  <Mail className="w-5 h-5 text-blue-600" />
+                <div className="p-2 bg-emerald-500/10 dark:bg-emerald-500/20 rounded-lg">
+                  <Mail className="w-5 h-5 text-emerald-600" />
                 </div>
                 <div className="flex-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
@@ -208,8 +208,8 @@ export default function ProfilePage() {
 
               {profile.phone && (
                 <div className="flex items-start gap-4">
-                  <div className="p-2 bg-blue-500/10 dark:bg-blue-500/20 rounded-lg">
-                    <Phone className="w-5 h-5 text-blue-600" />
+                  <div className="p-2 bg-emerald-500/10 dark:bg-emerald-500/20 rounded-lg">
+                    <Phone className="w-5 h-5 text-emerald-600" />
                   </div>
                   <div className="flex-1">
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
@@ -224,8 +224,8 @@ export default function ProfilePage() {
 
               {profile.dob && (
                 <div className="flex items-start gap-4">
-                  <div className="p-2 bg-blue-500/10 dark:bg-blue-500/20 rounded-lg">
-                    <Calendar className="w-5 h-5 text-blue-600" />
+                  <div className="p-2 bg-emerald-500/10 dark:bg-emerald-500/20 rounded-lg">
+                    <Calendar className="w-5 h-5 text-emerald-600" />
                   </div>
                   <div className="flex-1">
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
@@ -258,8 +258,8 @@ export default function ProfilePage() {
             <div className="space-y-4">
               {(profile.country || profile.city) && (
                 <div className="flex items-start gap-4">
-                  <div className="p-2 bg-blue-500/10 dark:bg-blue-500/20 rounded-lg">
-                    <MapPin className="w-5 h-5 text-blue-600" />
+                  <div className="p-2 bg-emerald-500/10 dark:bg-emerald-500/20 rounded-lg">
+                    <MapPin className="w-5 h-5 text-emerald-600" />
                   </div>
                   <div className="flex-1">
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
@@ -276,8 +276,8 @@ export default function ProfilePage() {
 
               {profile.address && (
                 <div className="flex items-start gap-4">
-                  <div className="p-2 bg-blue-500/10 dark:bg-blue-500/20 rounded-lg">
-                    <MapPin className="w-5 h-5 text-blue-600" />
+                  <div className="p-2 bg-emerald-500/10 dark:bg-emerald-500/20 rounded-lg">
+                    <MapPin className="w-5 h-5 text-emerald-600" />
                   </div>
                   <div className="flex-1">
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
@@ -292,8 +292,8 @@ export default function ProfilePage() {
               )}
 
               <div className="flex items-start gap-4">
-                <div className="p-2 bg-blue-500/10 dark:bg-blue-500/20 rounded-lg">
-                  <Hash className="w-5 h-5 text-blue-600" />
+                <div className="p-2 bg-emerald-500/10 dark:bg-emerald-500/20 rounded-lg">
+                  <Hash className="w-5 h-5 text-emerald-600" />
                 </div>
                 <div className="flex-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
@@ -307,8 +307,8 @@ export default function ProfilePage() {
 
               {profile.currency && (
                 <div className="flex items-start gap-4">
-                  <div className="p-2 bg-blue-500/10 dark:bg-blue-500/20 rounded-lg">
-                    <DollarSign className="w-5 h-5 text-blue-600" />
+                  <div className="p-2 bg-emerald-500/10 dark:bg-emerald-500/20 rounded-lg">
+                    <DollarSign className="w-5 h-5 text-emerald-600" />
                   </div>
                   <div className="flex-1">
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
@@ -389,13 +389,13 @@ export default function ProfilePage() {
           </div>
 
           {!profile.has_submitted_kyc && (
-            <div className="mt-4 p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-              <p className="text-sm text-blue-600 dark:text-blue-400 mb-3">
+            <div className="mt-4 p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
+              <p className="text-sm text-emerald-600 dark:text-emerald-400 mb-3">
                 Complete your KYC verification to unlock all features and increase your trading limits.
               </p>
               <button
                 onClick={() => router.push("/kyc")}
-                className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold rounded-lg transition-colors"
+                className="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold rounded-lg transition-colors"
               >
                 Complete KYC
               </button>

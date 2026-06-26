@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -198,7 +198,7 @@ export default function ReferralPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+        <div className="w-5 h-5 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
       </div>
     );
   }
@@ -219,7 +219,7 @@ export default function ReferralPage() {
               fetchReferralData();
               fetchReferrals();
             }}
-            className="w-full px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-all"
+            className="w-full px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-medium transition-all"
           >
             Try Again
           </button>
@@ -236,7 +236,7 @@ export default function ReferralPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="bg-gradient-to-br from-blue-600 to-blue-700 dark:from-blue-700 dark:to-blue-800 rounded-2xl p-6 sm:p-8 text-white shadow-2xl"
+          className="bg-gradient-to-br from-emerald-600 to-emerald-700 dark:from-emerald-700 dark:to-emerald-800 rounded-2xl p-6 sm:p-8 text-white shadow-2xl"
         >
           <div className="flex items-center gap-3 mb-4">
             <div className="p-3 bg-white/20 rounded-full">
@@ -245,7 +245,7 @@ export default function ReferralPage() {
             <h1 className="text-sm sm:text-base font-bold">Reward Center</h1>
           </div>
 
-          <p className="text-blue-50 dark:text-blue-100 text-sm sm:text-base mb-6">
+          <p className="text-emerald-50 dark:text-emerald-100 text-sm sm:text-base mb-6">
             Invite friends and earn rewards! Get{" "}
             <span className="font-bold text-lg">
               {referralData?.referral_bonus_rate || 10}%
@@ -257,8 +257,8 @@ export default function ReferralPage() {
             {/* Total Referrals */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
               <div className="flex items-center gap-2 mb-2">
-                <Users className="w-5 h-5 text-blue-200" />
-                <p className="text-sm text-blue-100">Total Referrals</p>
+                <Users className="w-5 h-5 text-emerald-200" />
+                <p className="text-sm text-emerald-100">Total Referrals</p>
               </div>
               <p className="text-xl sm:text-2xl font-bold">
                 {referralData?.total_referrals || 0}
@@ -268,8 +268,8 @@ export default function ReferralPage() {
             {/* Total Earnings */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
               <div className="flex items-center gap-2 mb-2">
-                <DollarSign className="w-5 h-5 text-blue-200" />
-                <p className="text-sm text-blue-100">Total Earned</p>
+                <DollarSign className="w-5 h-5 text-emerald-200" />
+                <p className="text-sm text-emerald-100">Total Earned</p>
               </div>
               <p className="text-xl sm:text-2xl font-bold">
                 $
@@ -293,7 +293,7 @@ export default function ReferralPage() {
           className="bg-white dark:bg-[#1a2744] border border-gray-200 dark:border-white/10 rounded-xl sm:rounded-2xl p-5 sm:p-8"
         >
           <div className="flex items-center gap-3 mb-6">
-            <Share2 className="w-6 h-6 text-blue-500" />
+            <Share2 className="w-6 h-6 text-emerald-500" />
             <h2 className="text-sm sm:text-base font-bold text-gray-900 dark:text-white">
               Your Referral Link
             </h2>
@@ -308,7 +308,7 @@ export default function ReferralPage() {
               </div>
               <button
                 onClick={handleCopyLink}
-                className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-all shadow-sm whitespace-nowrap"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-medium transition-all shadow-sm whitespace-nowrap"
               >
                 {copied ? (
                   <>
@@ -325,14 +325,14 @@ export default function ReferralPage() {
             </div>
 
             {/* Referral Code Display */}
-            <div className="bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/30 rounded-lg p-4">
+            <div className="bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/30 rounded-lg p-4">
               <div className="flex items-center justify-between flex-wrap gap-3">
                 <div className="flex-1 min-w-0">
                   <p className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">
                     Your Referral Code
                   </p>
                   {referralData?.referral_code ? (
-                    <p className="text-sm font-bold text-blue-600 dark:text-blue-400 font-mono break-all">
+                    <p className="text-sm font-bold text-emerald-600 dark:text-emerald-400 font-mono break-all">
                       {referralData.referral_code}
                     </p>
                   ) : (
@@ -346,7 +346,7 @@ export default function ReferralPage() {
                 <button
                   onClick={generateReferralCode}
                   disabled={generating}
-                  className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed text-sm flex items-center gap-2 whitespace-nowrap"
+                  className="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed text-sm flex items-center gap-2 whitespace-nowrap"
                 >
                   {generating ? (
                     <>
@@ -402,8 +402,8 @@ export default function ReferralPage() {
             {/* Task 1: Refer a Friend */}
             <div className="bg-gray-50 dark:bg-[#0f1c35] border border-gray-200 dark:border-white/10 rounded-xl p-4 sm:p-6">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-blue-100 dark:bg-blue-500/20 rounded-full flex-shrink-0">
-                  <Users className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                <div className="p-3 bg-emerald-100 dark:bg-emerald-500/20 rounded-full flex-shrink-0">
+                  <Users className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-sm sm:text-base font-bold text-yellow-600 dark:text-yellow-500 mb-2">
@@ -416,7 +416,7 @@ export default function ReferralPage() {
                   </p>
                   <button
                     onClick={handleShareClick}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-all"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm font-medium transition-all"
                   >
                     <Share2 className="w-4 h-4" />
                     Share Link
@@ -428,8 +428,8 @@ export default function ReferralPage() {
             {/* Task 2: First Deposit Bonus */}
             <div className="bg-gray-50 dark:bg-[#0f1c35] border border-gray-200 dark:border-white/10 rounded-xl p-4 sm:p-6">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-blue-100 dark:bg-blue-500/20 rounded-full flex-shrink-0">
-                  <DollarSign className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                <div className="p-3 bg-emerald-100 dark:bg-emerald-500/20 rounded-full flex-shrink-0">
+                  <DollarSign className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-sm sm:text-base font-bold text-yellow-600 dark:text-yellow-500 mb-2">
@@ -442,7 +442,7 @@ export default function ReferralPage() {
 
                   <button
                     onClick={() => setShowDeposit(true)}
-                    className="inline-flex items-center mt-3 gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-all"
+                    className="inline-flex items-center mt-3 gap-2 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm font-medium transition-all"
                   >
                     <DownloadCloud className="w-4 h-4" />
                     Deposit
@@ -521,7 +521,7 @@ export default function ReferralPage() {
                             {referral.has_deposited ? "Deposited" : "Pending"}
                           </span>
                         </td>
-                        <td className="py-5 px-4 text-sm font-semibold text-blue-600 dark:text-blue-400">
+                        <td className="py-5 px-4 text-sm font-semibold text-emerald-600 dark:text-emerald-400">
                           $
                           {parseFloat(referral.bonus_earned).toLocaleString(
                             undefined,
@@ -577,7 +577,7 @@ export default function ReferralPage() {
                         <p className="text-xs text-gray-500 dark:text-gray-400">
                           Earned
                         </p>
-                        <p className="text-sm font-bold text-blue-600 dark:text-blue-400">
+                        <p className="text-sm font-bold text-emerald-600 dark:text-emerald-400">
                           $
                           {parseFloat(referral.bonus_earned).toLocaleString(
                             undefined,
@@ -641,11 +641,11 @@ export default function ReferralPage() {
                     type="text"
                     value={referralData?.referral_link || ""}
                     readOnly
-                    className="flex-1 px-4 py-3 bg-gray-50 dark:bg-[#0f1c35] border border-gray-200 dark:border-white/10 rounded-lg text-sm text-gray-700 dark:text-gray-300 font-mono focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="flex-1 px-4 py-3 bg-gray-50 dark:bg-[#0f1c35] border border-gray-200 dark:border-white/10 rounded-lg text-sm text-gray-700 dark:text-gray-300 font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500"
                   />
                   <button
                     onClick={handleModalCopy}
-                    className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-all shadow-sm flex items-center justify-center gap-2 whitespace-nowrap"
+                    className="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-medium transition-all shadow-sm flex items-center justify-center gap-2 whitespace-nowrap"
                   >
                     {modalCopied ? (
                       <>
@@ -663,11 +663,11 @@ export default function ReferralPage() {
               </div>
 
               {/* Referral Code in Modal */}
-              <div className="bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/30 rounded-lg p-4">
+              <div className="bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/30 rounded-lg p-4">
                 <p className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">
                   Your Referral Code
                 </p>
-                <p className="text-xl font-bold text-blue-600 dark:text-blue-400 font-mono">
+                <p className="text-xl font-bold text-emerald-600 dark:text-emerald-400 font-mono">
                   {referralData?.referral_code || "N/A"}
                 </p>
               </div>

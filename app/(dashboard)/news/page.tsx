@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -114,7 +114,7 @@ export default function NewsPage() {
               placeholder="Search news..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-3 pl-12 bg-white dark:bg-[#1a2744] text-gray-900 dark:text-white border-2 border-gray-200 dark:border-white/10 rounded-lg focus:outline-none focus:border-blue-500 dark:focus:border-blue-500 transition-colors placeholder:text-gray-400 dark:placeholder:text-gray-500"
+              className="w-full px-4 py-3 pl-12 bg-white dark:bg-[#1a2744] text-gray-900 dark:text-white border-2 border-gray-200 dark:border-white/10 rounded-lg focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-500 transition-colors placeholder:text-gray-400 dark:placeholder:text-gray-500"
             />
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-500" />
           </div>
@@ -127,7 +127,7 @@ export default function NewsPage() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${
                   selectedCategory === category
-                    ? "bg-blue-500 text-white"
+                    ? "bg-emerald-500 text-white"
                     : "bg-white dark:bg-[#1a2744] text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-[#1e3a5f]/50"
                 }`}
               >
@@ -140,7 +140,7 @@ export default function NewsPage() {
         {/* Loading State */}
         {loading && (
           <div className="flex justify-center items-center py-20">
-            <div className="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+            <div className="w-5 h-5 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
           </div>
         )}
 
@@ -150,7 +150,7 @@ export default function NewsPage() {
             <p className="text-red-500 text-lg mb-4">{error}</p>
             <button
               onClick={fetchNews}
-              className="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors"
+              className="px-6 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-colors"
             >
               Retry
             </button>
@@ -175,7 +175,7 @@ export default function NewsPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 onClick={() => setSelectedNews(news)}
-                className="bg-white dark:bg-[#1a2744] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-blue-500/10"
+                className="bg-white dark:bg-[#1a2744] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 hover:border-emerald-500 dark:hover:border-emerald-500 transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-emerald-500/10"
               >
                 {/* Image */}
                 <div className="relative h-48 bg-gray-100 dark:bg-white/5">
@@ -187,7 +187,7 @@ export default function NewsPage() {
                     unoptimized
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full">
+                    <span className="px-3 py-1 bg-emerald-500 text-white text-xs font-semibold rounded-full">
                       {news.category}
                     </span>
                   </div>
@@ -265,7 +265,7 @@ export default function NewsPage() {
                       unoptimized
                     />
                     <div className="absolute bottom-4 left-4 flex gap-2">
-                      <span className="px-3 py-1 bg-blue-500 text-white text-sm font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-emerald-500 text-white text-sm font-semibold rounded-full">
                         {selectedNews.category}
                       </span>
                       {selectedNews.is_featured && (
@@ -358,7 +358,7 @@ export default function NewsPage() {
                     {/* Close Button */}
                     <button
                       onClick={() => setSelectedNews(null)}
-                      className="w-full py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
+                      className="w-full py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors"
                     >
                       Close
                     </button>

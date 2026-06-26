@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
@@ -209,7 +209,7 @@ export default function StockDetailPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
+        <Loader2 className="w-8 h-8 text-emerald-500 animate-spin" />
       </div>
     );
   }
@@ -409,7 +409,7 @@ export default function StockDetailPage() {
         <div className="flex gap-4">
           <button
             onClick={openBuyModal}
-            className="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 rounded-lg transition-colors"
+            className="flex-1 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-4 rounded-lg transition-colors"
           >
             Buy {stock.symbol}
           </button>
@@ -468,7 +468,7 @@ export default function StockDetailPage() {
                       value={shares}
                       onChange={(e) => setShares(e.target.value)}
                       placeholder="Enter shares"
-                      className="w-full p-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-500 focus:outline-none focus:border-blue-500 dark:focus:border-blue-500"
+                      className="w-full p-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-500 focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-500"
                     />
                   </div>
 
@@ -517,7 +517,7 @@ export default function StockDetailPage() {
                     <button
                       onClick={handleBuyClick}
                       disabled={processing || !shares || parseFloat(shares) <= 0}
-                      className="flex-1 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                      className="flex-1 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                     >
                       {processing ? (
                         <>

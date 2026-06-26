@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -99,7 +99,7 @@ export default function TradeHistoryPage() {
             <Filter className="w-4 h-4" />
             Filters
             {statusFilter !== "all" && (
-              <span className="px-2 py-0.5 bg-blue-500 text-white text-xs rounded-full">
+              <span className="px-2 py-0.5 bg-emerald-500 text-white text-xs rounded-full">
                 1
               </span>
             )}
@@ -138,7 +138,7 @@ export default function TradeHistoryPage() {
                       onClick={() => setStatusFilter(status as typeof statusFilter)}
                       className={`px-4 py-2 text-xs font-medium rounded-lg transition-all ${
                         statusFilter === status
-                          ? "bg-blue-500 text-white"
+                          ? "bg-emerald-500 text-white"
                           : "bg-gray-100 dark:bg-[#0f1c35] text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#1e3a5f]/50"
                       }`}
                     >
@@ -154,7 +154,7 @@ export default function TradeHistoryPage() {
         {/* Loading State */}
         {loading && (
           <div className="flex items-center justify-center py-20">
-            <div className="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+            <div className="w-5 h-5 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
           </div>
         )}
 
@@ -164,7 +164,7 @@ export default function TradeHistoryPage() {
             <p className="text-red-500 text-lg mb-4">{error}</p>
             <button
               onClick={fetchTradeHistory}
-              className="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors"
+              className="px-6 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-colors"
             >
               Retry
             </button>
@@ -186,7 +186,7 @@ export default function TradeHistoryPage() {
                 : "Start copying expert traders to see your trade history here"}
             </p>
             <Link href="/explore-traders">
-              <button className="px-6 py-2.5 bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold rounded-lg transition-colors">
+              <button className="px-6 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold rounded-lg transition-colors">
                 Explore Traders
               </button>
             </Link>
@@ -295,7 +295,7 @@ export default function TradeHistoryPage() {
                     <span
                       className={`text-xs font-medium ${
                         trade.status === "open"
-                          ? "text-blue-600 dark:text-blue-400"
+                          ? "text-emerald-600 dark:text-emerald-400"
                           : "text-gray-500 dark:text-gray-400"
                       }`}
                     >

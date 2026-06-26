@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -137,7 +137,7 @@ export default function WithdrawPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-24">
-        <Loader2 className="w-8 h-8 text-blue-400 animate-spin" />
+        <Loader2 className="w-8 h-8 text-emerald-400 animate-spin" />
       </div>
     );
   }
@@ -158,16 +158,16 @@ export default function WithdrawPage() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-4"
+          className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4"
         >
           <div className="flex items-start gap-3">
-            <CheckCircle className="w-5 h-5 text-blue-500 dark:text-blue-400 flex-shrink-0 mt-0.5" />
+            <CheckCircle className="w-5 h-5 text-emerald-500 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
             <div>
               <p className="text-sm font-medium text-gray-900 dark:text-white">Withdrawal Submitted</p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
                 ${parseFloat(success.amount).toFixed(2)} &middot; Ref: <span className="font-mono">{success.ref}</span>
               </p>
-              <button onClick={() => setSuccess(null)} className="text-xs text-blue-500 hover:underline mt-1">Dismiss</button>
+              <button onClick={() => setSuccess(null)} className="text-xs text-emerald-500 hover:underline mt-1">Dismiss</button>
             </div>
           </div>
         </motion.div>
@@ -201,7 +201,7 @@ export default function WithdrawPage() {
                 <button
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   className={`w-full px-4 py-3 rounded-lg text-left flex items-center justify-between transition-all bg-gray-100 dark:bg-[#0f1a2e] border ${
-                    isDropdownOpen ? "border-blue-500" : "border-gray-300 dark:border-white/10"
+                    isDropdownOpen ? "border-emerald-500" : "border-gray-300 dark:border-white/10"
                   } ${selectedMethod ? "text-gray-900 dark:text-white" : "text-gray-500"}`}
                 >
                   <span>{selectedMethod ? getDisplayName(selectedMethod) : "Select method"}</span>
@@ -210,7 +210,7 @@ export default function WithdrawPage() {
 
                 {isDropdownOpen && (
                   <div className="absolute z-10 w-full mt-1.5 bg-white dark:bg-[#1a2744] border border-gray-200 dark:border-white/10 rounded-lg shadow-lg overflow-hidden">
-                    <div className="px-3 py-2 bg-blue-500 text-white text-xs font-semibold">Select method</div>
+                    <div className="px-3 py-2 bg-emerald-500 text-white text-xs font-semibold">Select method</div>
                     <div className="max-h-48 overflow-y-auto">
                       {methods.length === 0 ? (
                         <div className="px-3 py-3 text-xs text-gray-500 dark:text-gray-400">
@@ -256,7 +256,7 @@ export default function WithdrawPage() {
                 placeholder="0.00"
                 min="0"
                 step="0.01"
-                className="w-full px-4 py-3 bg-gray-100 dark:bg-[#0f1a2e] border border-gray-300 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-all text-lg font-semibold"
+                className="w-full px-4 py-3 bg-gray-100 dark:bg-[#0f1a2e] border border-gray-300 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-600 focus:outline-none focus:border-emerald-500 transition-all text-lg font-semibold"
               />
               {profile && amount && parseFloat(amount) > parseFloat(profile.balance) && (
                 <p className="mt-1.5 text-xs text-red-400">
@@ -297,7 +297,7 @@ export default function WithdrawPage() {
             <button
               onClick={handleConfirmWithdrawal}
               disabled={submitting || !selectedMethod || !amount || !withdrawalAddress}
-              className="w-full py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-sm"
+              className="w-full py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-sm"
             >
               {submitting ? (
                 <><Loader2 className="w-4 h-4 animate-spin" />Processing...</>
@@ -307,10 +307,10 @@ export default function WithdrawPage() {
             </button>
 
             {/* Note */}
-            <div className="p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+            <div className="p-3 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
               <div className="flex items-start gap-2">
-                <Clock className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
-                <p className="text-[10px] text-blue-600 dark:text-blue-300">
+                <Clock className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+                <p className="text-[10px] text-emerald-600 dark:text-emerald-300">
                   <strong>Note:</strong> Withdrawals are processed within 24-48 hours. You will be notified once approved.
                 </p>
               </div>

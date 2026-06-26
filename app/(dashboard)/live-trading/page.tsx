@@ -15,7 +15,7 @@ export default function LiveTradingPage() {
   if (!mounted) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+        <div className="w-5 h-5 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
       </div>
     );
   }
@@ -40,14 +40,14 @@ export default function LiveTradingPage() {
         </div>
 
         {/* Info Card */}
-        <div className="mb-6 bg-blue-500/10 dark:bg-blue-500/20 border border-blue-500/30 dark:border-blue-500/40 rounded-lg p-4">
+        <div className="mb-6 bg-emerald-500/10 dark:bg-emerald-500/20 border border-emerald-500/30 dark:border-emerald-500/40 rounded-lg p-4">
           <div className="flex items-start gap-3">
-            <AlertCircle className="w-6 h-6 text-blue-500 flex-shrink-0 mt-0.5" />
+            <AlertCircle className="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" />
             <div>
-              <h3 className="font-semibold text-blue-600 dark:text-blue-400 mb-1">
+              <h3 className="font-semibold text-emerald-600 dark:text-emerald-400 mb-1">
                 Live Trading
               </h3>
-              <p className="text-sm text-blue-700 dark:text-blue-300">
+              <p className="text-sm text-emerald-700 dark:text-emerald-300">
                 Access real-time trading opportunities. Click the button below
                 to view the requirements for starting a live trading session.
               </p>
@@ -59,7 +59,7 @@ export default function LiveTradingPage() {
         <div className="mb-8 flex justify-center">
           <motion.button
             onClick={() => setShowModal(true)}
-            className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white text-sm font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3"
+            className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white text-sm font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3"
             animate={{
               y: [0, -10, 0],
             }}
@@ -109,8 +109,8 @@ export default function LiveTradingPage() {
                     <X className="w-5 h-5" />
                   </button>
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-blue-500/10 dark:bg-blue-500/20 flex items-center justify-center">
-                      <Shield className="w-6 h-6 text-blue-500" />
+                    <div className="w-12 h-12 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 flex items-center justify-center">
+                      <Shield className="w-6 h-6 text-emerald-500" />
                     </div>
                     <div>
                       <h2 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">
@@ -126,7 +126,7 @@ export default function LiveTradingPage() {
                 {/* Modal Content */}
                 <div className="p-6 space-y-6">
                   {/* Intro */}
-                  <div className="bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 rounded-xl p-4">
+                  <div className="bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 rounded-xl p-4">
                     <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                       Thank you for your interest in our Live Trading feature! To ensure a
                       safe and compliant trading environment, we have established minimum
@@ -138,14 +138,14 @@ export default function LiveTradingPage() {
                   {/* Requirements */}
                   <div className="space-y-4">
                     <h3 className="text-sm font-semibold text-gray-900 dark:text-white flex items-center gap-2">
-                      <DollarSign className="w-5 h-5 text-blue-500" />
+                      <DollarSign className="w-5 h-5 text-emerald-500" />
                       Minimum Account Requirements
                     </h3>
 
                     <div className="space-y-3">
                       {/* Requirement 1 */}
                       <div className="flex items-start gap-3 p-4 bg-gray-50 dark:bg-[#0f1c35] rounded-lg border border-gray-200 dark:border-white/10">
-                        <div className="w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
+                        <div className="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
                           1
                         </div>
                         <div>
@@ -163,7 +163,7 @@ export default function LiveTradingPage() {
 
                       {/* Requirement 2 */}
                       <div className="flex items-start gap-3 p-4 bg-gray-50 dark:bg-[#0f1c35] rounded-lg border border-gray-200 dark:border-white/10">
-                        <div className="w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
+                        <div className="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
                           2
                         </div>
                         <div>
@@ -180,7 +180,7 @@ export default function LiveTradingPage() {
 
                       {/* Requirement 3 */}
                       <div className="flex items-start gap-3 p-4 bg-gray-50 dark:bg-[#0f1c35] rounded-lg border border-gray-200 dark:border-white/10">
-                        <div className="w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
+                        <div className="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
                           3
                         </div>
                         <div>
@@ -229,7 +229,7 @@ export default function LiveTradingPage() {
                   </div>
 
                   {/* Next Steps */}
-                  <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-500/10 dark:to-blue-600/10 rounded-xl p-4 border border-blue-200 dark:border-blue-500/20">
+                  <div className="bg-gradient-to-r from-emerald-50 to-emerald-100 dark:from-emerald-500/10 dark:to-emerald-600/10 rounded-xl p-4 border border-emerald-200 dark:border-emerald-500/20">
                     <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
                       Ready to Get Started?
                     </h3>

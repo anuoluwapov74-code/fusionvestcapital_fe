@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
@@ -96,7 +96,7 @@ export default function StockListPage() {
               placeholder="Search stocks..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-white dark:bg-[#1a2744] text-gray-900 dark:text-white rounded-lg border-2 border-gray-200 dark:border-white/10 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none transition-colors placeholder:text-gray-400 dark:placeholder:text-gray-500"
+              className="w-full pl-10 pr-4 py-3 bg-white dark:bg-[#1a2744] text-gray-900 dark:text-white rounded-lg border-2 border-gray-200 dark:border-white/10 focus:border-emerald-500 dark:focus:border-emerald-500 focus:outline-none transition-colors placeholder:text-gray-400 dark:placeholder:text-gray-500"
             />
           </div>
 
@@ -106,7 +106,7 @@ export default function StockListPage() {
               onClick={() => setFilterType("all")}
               className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                 filterType === "all"
-                  ? "bg-blue-500 text-white"
+                  ? "bg-emerald-500 text-white"
                   : "bg-white dark:bg-[#1a2744] text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-[#1e3a5f]/50"
               }`}
             >
@@ -116,7 +116,7 @@ export default function StockListPage() {
               onClick={() => setFilterType("featured")}
               className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                 filterType === "featured"
-                  ? "bg-blue-500 text-white"
+                  ? "bg-emerald-500 text-white"
                   : "bg-white dark:bg-[#1a2744] text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-[#1e3a5f]/50"
               }`}
             >
@@ -128,7 +128,7 @@ export default function StockListPage() {
         {/* Loading State */}
         {loading && (
           <div className="flex justify-center items-center py-20">
-            <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
+            <Loader2 className="w-8 h-8 text-emerald-500 animate-spin" />
           </div>
         )}
 
@@ -139,7 +139,7 @@ export default function StockListPage() {
               <div
                 key={stock.id}
                 onClick={() => handleStockClick(stock.symbol)}
-                className="bg-white dark:bg-[#1a2744] p-6 rounded-lg border border-gray-200 dark:border-white/10 hover:border-blue-500 dark:hover:border-blue-500 transition-all cursor-pointer hover:shadow-lg hover:shadow-blue-500/10"
+                className="bg-white dark:bg-[#1a2744] p-6 rounded-lg border border-gray-200 dark:border-white/10 hover:border-emerald-500 dark:hover:border-emerald-500 transition-all cursor-pointer hover:shadow-lg hover:shadow-emerald-500/10"
               >
                 {/* Stock Header */}
                 <div className="flex items-center gap-3 mb-4">

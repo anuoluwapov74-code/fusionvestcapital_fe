@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useState, useMemo } from "react";
 import {
@@ -402,7 +402,7 @@ export default function TraderProfilePage() {
         <div className="flex gap-4">
           <button
             onClick={fetchTraderDetails}
-            className="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors"
+            className="px-6 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-colors"
           >
             Retry
           </button>
@@ -542,7 +542,7 @@ export default function TraderProfilePage() {
               {/* Stats Row */}
               <div className="flex flex-wrap gap-4 sm:gap-6 mt-5">
                 <div className="flex items-center gap-2">
-                  <DollarSign className="w-4 h-4 text-blue-500" />
+                  <DollarSign className="w-4 h-4 text-emerald-500" />
                   <div>
                     <div className="text-sm font-bold text-gray-900 dark:text-white">
                       ${parseFloat(trader.min_account_threshold).toLocaleString()}
@@ -593,7 +593,7 @@ export default function TraderProfilePage() {
                   {trader.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-xs font-medium bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-full border border-blue-100 dark:border-blue-500/20"
+                      className="px-3 py-1 text-xs font-medium bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full border border-emerald-100 dark:border-emerald-500/20"
                     >
                       {tag}
                     </span>
@@ -1260,7 +1260,7 @@ export default function TraderProfilePage() {
                     {trader.frequently_traded.map((asset, index) => (
                       <span
                         key={index}
-                        className="px-4 py-2 bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-400 text-sm rounded-xl font-medium border border-blue-100 dark:border-blue-500/20"
+                        className="px-4 py-2 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-sm rounded-xl font-medium border border-emerald-100 dark:border-emerald-500/20"
                       >
                         {asset}
                       </span>
@@ -1279,8 +1279,8 @@ export default function TraderProfilePage() {
               Copier Statistics
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-              <div className="text-center p-6 bg-blue-50 dark:bg-blue-500/10 rounded-2xl">
-                <Users className="w-8 h-8 text-blue-500 mx-auto mb-3" />
+              <div className="text-center p-6 bg-emerald-50 dark:bg-emerald-500/10 rounded-2xl">
+                <Users className="w-8 h-8 text-emerald-500 mx-auto mb-3" />
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">
                   {trader.copiers.toLocaleString()}
                 </div>
