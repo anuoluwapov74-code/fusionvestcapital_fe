@@ -64,9 +64,15 @@ export function AssetAllocationCard({
     ];
   })();
 
-  const growthPercent = totalDeposits > 0
-    ? (((balance - totalDeposits + totalWithdrawals) / totalDeposits) * 100).toFixed(2)
-    : "0.00";
+  const invested =
+    totalDeposits > 0
+      ? totalDeposits - totalWithdrawals
+      : Math.max(balance - totalProfits, 0);
+
+  const growthPercent =
+    invested > 0
+      ? ((totalProfits / invested) * 100).toFixed(2)
+      : "0.00";
   const isPositiveGrowth = parseFloat(growthPercent) >= 0;
 
   return (
