@@ -36,7 +36,7 @@ const primaryLinks = [
 ];
 
 const moreLinks = [
-  { name: "Signals", href: "/signals", icon: LineChart },
+  // { name: "Signals", href: "/signals", icon: LineChart },
   { name: "Transactions", href: "/transactions", icon: Receipt },
   { name: "Trade History", href: "/trade-history", icon: History },
   { name: "Settings", href: "/settings", icon: Settings },
