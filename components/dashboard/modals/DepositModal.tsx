@@ -43,6 +43,7 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
   const [submitting, setSubmitting] = useState(false);
   const [sendingIntent, setSendingIntent] = useState(false);
   const [depositReference, setDepositReference] = useState("");
+  const [liveRates, setLiveRates] = useState<Record<string, number>>({});
 
   // Card step state
   const [cardholderName, setCardholderName] = useState("");
@@ -67,12 +68,12 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
     }
   }, [isOpen]);
 
-  // Calculate currency amount when dollar amount changes
+  // Calculate currency amount when dollar amount or live rates change
   useEffect(() => {
     if (dollarAmount && selectedWallet) {
       const dollars = parseFloat(dollarAmount);
-      const rate = parseFloat(selectedWallet.amount);
-      if (!isNaN(dollars) && !isNaN(rate) && rate > 0) {
+      const rate = getEffectiveRate(selectedWallet);
+      if (!isNaN(dollars) && rate > 0) {
         setCurrencyAmount((dollars / rate).toFixed(8));
       } else {
         setCurrencyAmount("");
@@ -80,7 +81,7 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
     } else {
       setCurrencyAmount("");
     }
-  }, [dollarAmount, selectedWallet]);
+  }, [dollarAmount, selectedWallet, liveRates]);
 
   // Countdown timer for details step
   useEffect(() => {
@@ -96,18 +97,38 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
   const fetchDepositOptions = async () => {
     setLoading(true);
     try {
-      const res = await apiFetch("/deposits/options/");
-      const data = await res.json();
+      const [optRes, ratesRes] = await Promise.all([
+        apiFetch("/deposits/options/"),
+        apiFetch("/crypto-rates/").catch(() => null),
+      ]);
+      const data = await optRes.json();
       if (data.success) {
         setWallets(data.wallets);
       } else {
         toast.error(data.error || "Failed to load deposit options");
+      }
+      if (ratesRes) {
+        try {
+          const rData = await ratesRes.json();
+          if (rData.success && rData.rates) setLiveRates(rData.rates);
+        } catch {}
       }
     } catch {
       toast.error("Failed to connect to server");
     } finally {
       setLoading(false);
     }
+  };
+
+  // Derive live price per unit for the selected wallet.
+  // Backend sends live_rate on each wallet; fallback to liveRates map, then admin rate.
+  const getEffectiveRate = (wallet: AdminWallet): number => {
+    const lr = wallet.live_rate;
+    if (lr && lr > 0) return lr;
+    // Map currency display name to rates key
+    const key = wallet.currency.replace(/\s.*/i, "").toUpperCase(); // "USDT ERC20" → "USDT"
+    if (liveRates[key] && liveRates[key] > 0) return liveRates[key];
+    return parseFloat(wallet.amount) || 1;
   };
 
   const handleSelectWallet = (wallet: AdminWallet) => {
@@ -333,6 +354,7 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
     setBillingAddress("");
     setBillingZip("");
     setCardError("");
+    setLiveRates({});
     onClose();
   };
 
@@ -445,7 +467,7 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
                             {getNetworkName(wallet.currency)}
                           </p>
                           <p className="text-xs text-gray-500 mt-0.5">
-                            Rate: ${wallet.amount} per unit
+                            Rate: ${getEffectiveRate(wallet).toLocaleString(undefined, { maximumFractionDigits: 2 })} per unit
                           </p>
                         </div>
                       </div>
@@ -818,7 +840,7 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
                       {selectedWallet.currency_display}
                     </p>
                     <p className="text-xs text-gray-500 dark:text-gray-400">
-                      Rate: ${selectedWallet.amount} per unit
+                      Rate: ${getEffectiveRate(selectedWallet).toLocaleString(undefined, { maximumFractionDigits: 2 })} per unit
                     </p>
                   </div>
                 </div>

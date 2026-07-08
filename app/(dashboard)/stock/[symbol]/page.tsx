@@ -8,7 +8,6 @@ import { ArrowLeft, Loader2, X, TrendingUp, TrendingDown } from "lucide-react";
 import { apiFetch } from "@/lib/api";
 
 interface StockData {
-  id: number;
   name: string;
   symbol: string;
   logo_url: string;
@@ -19,7 +18,19 @@ interface StockData {
   market_cap: number;
   formatted_market_cap: string;
   sector: string;
+  category: string;
   is_positive_change: boolean;
+  description?: string;
+  day_high?: number;
+  day_low?: number;
+  year_high?: number;
+  year_low?: number;
+  open?: number;
+  previous_close?: number;
+  eps?: number | null;
+  pe?: number | null;
+  exchange?: string;
+  website?: string;
 }
 
 interface UserPosition {
@@ -41,6 +52,7 @@ export default function StockDetailPage() {
   const [userPosition, setUserPosition] = useState<UserPosition | null>(null);
   const [userBalance, setUserBalance] = useState<string>("0.00");
   const [loading, setLoading] = useState(true);
+  const [imgError, setImgError] = useState(false);
   const [isBuyModalOpen, setIsBuyModalOpen] = useState(false);
   const [isSellModalOpen, setIsSellModalOpen] = useState(false);
   const [shares, setShares] = useState("");
@@ -244,18 +256,19 @@ export default function StockDetailPage() {
         <div className="bg-white dark:bg-[#1a2744] rounded-2xl p-6 mb-6 border border-gray-200 dark:border-white/10">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 relative rounded-full overflow-hidden bg-white">
-                {stock.logo_url ? (
+              <div className="w-16 h-16 relative rounded-full overflow-hidden bg-white flex items-center justify-center">
+                {stock.logo_url && !imgError ? (
                   <Image
                     src={stock.logo_url}
                     alt={stock.name}
                     fill
                     className="object-contain p-2"
                     unoptimized
+                    onError={() => setImgError(true)}
                   />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-600 font-bold text-2xl">
-                    {stock.symbol.charAt(0)}
+                  <div className="w-full h-full flex items-center justify-center bg-gray-800 text-white font-bold text-sm rounded-full">
+                    {stock.symbol.slice(0, 3)}
                   </div>
                 )}
               </div>
@@ -335,6 +348,79 @@ export default function StockDetailPage() {
             </p>
           </div>
         </div>
+
+        {/* FMP Extended Market Data */}
+        {(stock.day_high || stock.open || stock.year_high || stock.description) && (
+          <div className="bg-white dark:bg-[#1a2744] rounded-2xl p-6 mb-6 border border-gray-200 dark:border-white/10">
+            <h2 className="text-base font-bold text-gray-900 dark:text-white mb-4">Market Data</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
+              {stock.open ? (
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">Open</p>
+                  <p className="text-sm font-semibold text-gray-900 dark:text-white">${stock.open.toFixed(2)}</p>
+                </div>
+              ) : null}
+              {stock.previous_close ? (
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">Prev. Close</p>
+                  <p className="text-sm font-semibold text-gray-900 dark:text-white">${stock.previous_close.toFixed(2)}</p>
+                </div>
+              ) : null}
+              {stock.day_high ? (
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">Day High</p>
+                  <p className="text-sm font-semibold text-green-500">${stock.day_high.toFixed(2)}</p>
+                </div>
+              ) : null}
+              {stock.day_low ? (
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">Day Low</p>
+                  <p className="text-sm font-semibold text-red-500">${stock.day_low.toFixed(2)}</p>
+                </div>
+              ) : null}
+              {stock.year_high ? (
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">52W High</p>
+                  <p className="text-sm font-semibold text-green-500">${stock.year_high.toFixed(2)}</p>
+                </div>
+              ) : null}
+              {stock.year_low ? (
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">52W Low</p>
+                  <p className="text-sm font-semibold text-red-500">${stock.year_low.toFixed(2)}</p>
+                </div>
+              ) : null}
+              {stock.eps != null ? (
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">EPS</p>
+                  <p className="text-sm font-semibold text-gray-900 dark:text-white">${Number(stock.eps).toFixed(2)}</p>
+                </div>
+              ) : null}
+              {stock.pe != null ? (
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">P/E Ratio</p>
+                  <p className="text-sm font-semibold text-gray-900 dark:text-white">{Number(stock.pe).toFixed(2)}</p>
+                </div>
+              ) : null}
+            </div>
+            {stock.description && (
+              <div className="border-t border-gray-100 dark:border-white/10 pt-4">
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">About</p>
+                <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed line-clamp-4">{stock.description}</p>
+                {stock.website && (
+                  <a
+                    href={stock.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-2 text-xs text-emerald-500 hover:underline"
+                  >
+                    {stock.website}
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Position Details */}
         {userPosition && (

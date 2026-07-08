@@ -7,7 +7,6 @@ import { Search, TrendingUp, TrendingDown, Loader2 } from "lucide-react";
 import { apiFetch } from "@/lib/api";
 
 interface Stock {
-  id: number;
   symbol: string;
   name: string;
   logo_url: string;
@@ -16,7 +15,10 @@ interface Stock {
   change_percent: string;
   is_positive_change: boolean;
   is_featured: boolean;
+  category: string;
 }
+
+type CategoryTab = "all" | "stock" | "crypto" | "etf" | "indices";
 
 export default function StockListPage() {
   const router = useRouter();
@@ -25,19 +27,24 @@ export default function StockListPage() {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [filterType, setFilterType] = useState<"all" | "featured">("all");
+  const [categoryTab, setCategoryTab] = useState<CategoryTab>("all");
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
+
+  const markImgFailed = (sym: string) =>
+    setFailedImages((prev) => new Set(prev).add(sym));
 
   // Fetch stocks from API
   useEffect(() => {
     fetchStocks();
-  }, [filterType]);
+  }, [filterType, categoryTab]);
 
   const fetchStocks = async () => {
     try {
       setLoading(true);
-      const url =
-        filterType === "featured"
-          ? "/stocks/?featured=true"
-          : "/stocks/";
+      const params = new URLSearchParams();
+      if (filterType === "featured") params.set("featured", "true");
+      if (categoryTab !== "all") params.set("category", categoryTab);
+      const url = `/stocks/?${params.toString()}`;
 
       const response = await apiFetch(url);
       const data = await response.json();
@@ -73,6 +80,14 @@ export default function StockListPage() {
     router.push(`/stock/${symbol}`);
   };
 
+  const CATEGORY_TABS: { key: CategoryTab; label: string }[] = [
+    { key: "all", label: "All" },
+    { key: "stock", label: "Stocks" },
+    { key: "crypto", label: "Crypto" },
+    { key: "etf", label: "ETF" },
+    { key: "indices", label: "Indices" },
+  ];
+
   return (
     <div className="min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -87,7 +102,7 @@ export default function StockListPage() {
         </div>
 
         {/* Search and Filter */}
-        <div className="mb-6 flex flex-col sm:flex-row gap-4">
+        <div className="mb-4 flex flex-col sm:flex-row gap-4">
           {/* Search Bar */}
           <div className="flex-1 relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-500" />
@@ -110,7 +125,7 @@ export default function StockListPage() {
                   : "bg-white dark:bg-[#1a2744] text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-[#1e3a5f]/50"
               }`}
             >
-              All Stocks
+              All
             </button>
             <button
               onClick={() => setFilterType("featured")}
@@ -125,6 +140,23 @@ export default function StockListPage() {
           </div>
         </div>
 
+        {/* Category Tabs */}
+        <div className="mb-6 flex gap-2 overflow-x-auto pb-1">
+          {CATEGORY_TABS.map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setCategoryTab(tab.key)}
+              className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors ${
+                categoryTab === tab.key
+                  ? "bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/40"
+                  : "bg-white dark:bg-[#1a2744] text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-white/10 hover:border-emerald-500/40"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
         {/* Loading State */}
         {loading && (
           <div className="flex justify-center items-center py-20">
@@ -137,24 +169,25 @@ export default function StockListPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredStocks.map((stock) => (
               <div
-                key={stock.id}
+                key={stock.symbol}
                 onClick={() => handleStockClick(stock.symbol)}
                 className="bg-white dark:bg-[#1a2744] p-6 rounded-lg border border-gray-200 dark:border-white/10 hover:border-emerald-500 dark:hover:border-emerald-500 transition-all cursor-pointer hover:shadow-lg hover:shadow-emerald-500/10"
               >
                 {/* Stock Header */}
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 relative rounded-full overflow-hidden bg-white">
-                    {stock.logo_url ? (
+                  <div className="w-12 h-12 relative rounded-full overflow-hidden bg-white flex items-center justify-center">
+                    {stock.logo_url && !failedImages.has(stock.symbol) ? (
                       <Image
                         src={stock.logo_url}
                         alt={stock.name}
                         fill
                         className="object-contain p-1"
                         unoptimized
+                        onError={() => markImgFailed(stock.symbol)}
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-600 font-bold">
-                        {stock.symbol.charAt(0)}
+                      <div className="w-full h-full flex items-center justify-center bg-gray-800 text-white text-xs font-bold rounded-full">
+                        {stock.symbol.slice(0, 3)}
                       </div>
                     )}
                   </div>
