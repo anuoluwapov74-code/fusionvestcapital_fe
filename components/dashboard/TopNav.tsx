@@ -30,7 +30,7 @@ import { apiFetch } from "@/lib/api";
 const primaryLinks = [
   { name: "Dashboard", href: "/portfolio", icon: Home },
   { name: "Traders", href: "/explore-traders", icon: Users },
-  // { name: "Markets", href: "/stock", icon: BarChart3 },
+  { name: "Markets", href: "/stock", icon: BarChart3 },
   { name: "Live Trade", href: "/live-trading", icon: Radio },
   { name: "News", href: "/news", icon: Newspaper },
 ];
