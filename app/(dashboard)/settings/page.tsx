@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   User,
   Shield,
-  Wallet,
   X,
   Loader2,
   Lock,
@@ -14,7 +13,7 @@ import {
 } from "lucide-react";
 import { apiFetch } from "@/lib/api";
 
-type Tab = "profile" | "security" | "payment";
+type Tab = "profile" | "security";
 
 interface EditModalData {
   type:
@@ -22,9 +21,6 @@ interface EditModalData {
     | "phone"
     | "country"
     | "password"
-    | "btc"
-    | "eth"
-    | "usdt"
     | "disable2fa"
     | null;
 }
@@ -42,23 +38,6 @@ interface UserSettings {
     is_verified: boolean;
     account_status: string;
   };
-  payment_methods: {
-    btc: {
-      address: string;
-      has_method: boolean;
-    };
-    eth: {
-      address: string;
-      network: string;
-      has_method: boolean;
-    };
-    usdt: {
-      address: string;
-      network: string;
-      method_type: string;
-      has_method: boolean;
-    };
-  };
 }
 
 export default function SettingsPage() {
@@ -70,14 +49,11 @@ export default function SettingsPage() {
   const [error, setError] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
-  // 2FA state
   const [twoFactorEnabled, setTwoFactorEnabled] = useState(false);
   const [toggling2FA, setToggling2FA] = useState(false);
 
-  // User settings data
   const [userSettings, setUserSettings] = useState<UserSettings | null>(null);
 
-  // Form data
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -86,12 +62,9 @@ export default function SettingsPage() {
     oldPassword: "",
     newPassword: "",
     confirmPassword: "",
-    cryptoAddress: "",
-    usdtNetwork: "USDT_TRC20",
     disable2faPassword: "",
   });
 
-  // Fetch user settings on mount
   useEffect(() => {
     fetchUserSettings();
     fetch2FAStatus();
@@ -101,13 +74,8 @@ export default function SettingsPage() {
     try {
       setLoading(true);
       setError(null);
-
       const response = await apiFetch("/settings/");
-
-      if (!response.ok) {
-        throw new Error("Failed to fetch user settings");
-      }
-
+      if (!response.ok) throw new Error("Failed to fetch user settings");
       const data = await response.json();
       setUserSettings(data);
     } catch (err) {
@@ -121,7 +89,6 @@ export default function SettingsPage() {
   const fetch2FAStatus = async () => {
     try {
       const response = await apiFetch("/2fa-status/");
-
       if (response.ok) {
         const data = await response.json();
         setTwoFactorEnabled(data.two_factor_enabled);
@@ -136,17 +103,9 @@ export default function SettingsPage() {
       setToggling2FA(true);
       setError(null);
       setSuccessMessage(null);
-
-      const response = await apiFetch("/enable-2fa/", {
-        method: "POST",
-      });
-
+      const response = await apiFetch("/enable-2fa/", { method: "POST" });
       const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || "Failed to enable 2FA");
-      }
-
+      if (!response.ok) throw new Error(data.error || "Failed to enable 2FA");
       setTwoFactorEnabled(true);
       setSuccessMessage(
         "Two-factor authentication enabled! You'll receive a code via email on your next login."
@@ -173,34 +132,20 @@ export default function SettingsPage() {
       setError("Password is required to disable 2FA");
       return;
     }
-
     try {
       setUpdating(true);
       setError(null);
       setSuccessMessage(null);
-
       const response = await apiFetch("/disable-2fa/", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          password: formData.disable2faPassword,
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password: formData.disable2faPassword }),
       });
-
       const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || "Failed to disable 2FA");
-      }
-
+      if (!response.ok) throw new Error(data.error || "Failed to disable 2FA");
       setTwoFactorEnabled(false);
       setSuccessMessage("Two-factor authentication disabled successfully");
-
-      setTimeout(() => {
-        closeModal();
-      }, 1500);
+      setTimeout(() => { closeModal(); }, 1500);
     } catch (err: unknown) {
       if (err instanceof Error) {
         console.error("Error disabling 2FA:", err);
@@ -215,14 +160,9 @@ export default function SettingsPage() {
 
   const openEditModal = (type: EditModalData["type"]) => {
     if (!userSettings) return;
-
     switch (type) {
       case "name":
-        setFormData({
-          ...formData,
-          firstName: userSettings.profile.first_name,
-          lastName: userSettings.profile.last_name,
-        });
+        setFormData({ ...formData, firstName: userSettings.profile.first_name, lastName: userSettings.profile.last_name });
         break;
       case "phone":
         setFormData({ ...formData, phone: userSettings.profile.phone });
@@ -230,33 +170,8 @@ export default function SettingsPage() {
       case "country":
         setFormData({ ...formData, country: userSettings.profile.country });
         break;
-      case "btc":
-        setFormData({
-          ...formData,
-          cryptoAddress: userSettings.payment_methods.btc.address,
-        });
-        break;
-      case "eth":
-        setFormData({
-          ...formData,
-          cryptoAddress: userSettings.payment_methods.eth.address,
-        });
-        break;
-      case "usdt":
-        setFormData({
-          ...formData,
-          cryptoAddress: userSettings.payment_methods.usdt.address,
-          usdtNetwork:
-            userSettings.payment_methods.usdt.method_type || "USDT_TRC20",
-        });
-        break;
       case "password":
-        setFormData({
-          ...formData,
-          oldPassword: "",
-          newPassword: "",
-          confirmPassword: "",
-        });
+        setFormData({ ...formData, oldPassword: "", newPassword: "", confirmPassword: "" });
         break;
     }
     setEditModal({ type });
@@ -272,8 +187,6 @@ export default function SettingsPage() {
       oldPassword: "",
       newPassword: "",
       confirmPassword: "",
-      cryptoAddress: "",
-      usdtNetwork: "USDT_TRC20",
       disable2faPassword: "",
     });
     setSuccessMessage(null);
@@ -288,14 +201,12 @@ export default function SettingsPage() {
 
       let endpoint = "";
       let body = {};
+      let method = "PATCH";
 
       switch (editModal.type) {
         case "name":
           endpoint = "/settings/profile/";
-          body = {
-            first_name: formData.firstName,
-            last_name: formData.lastName,
-          };
+          body = { first_name: formData.firstName, last_name: formData.lastName };
           break;
         case "phone":
           endpoint = "/settings/profile/";
@@ -307,66 +218,29 @@ export default function SettingsPage() {
           break;
         case "password":
           endpoint = "/settings/password/";
+          method = "POST";
           body = {
             old_password: formData.oldPassword,
             new_password: formData.newPassword,
             confirm_password: formData.confirmPassword,
           };
           break;
-        case "btc":
-          endpoint = "/settings/payment-method/";
-          body = {
-            method_type: "BTC",
-            address: formData.cryptoAddress,
-          };
-          break;
-        case "eth":
-          endpoint = "/settings/payment-method/";
-          body = {
-            method_type: "ETH",
-            address: formData.cryptoAddress,
-          };
-          break;
-        case "usdt":
-          endpoint = "/settings/payment-method/";
-          body = {
-            method_type: formData.usdtNetwork,
-            address: formData.cryptoAddress,
-          };
-          break;
         default:
           return;
       }
 
-      const method =
-        editModal.type === "password" ||
-        editModal.type === "btc" ||
-        editModal.type === "eth" ||
-        editModal.type === "usdt"
-          ? "POST"
-          : "PATCH";
-
       const response = await apiFetch(endpoint, {
         method,
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
 
       const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || "Failed to update");
-      }
+      if (!response.ok) throw new Error(data.error || "Failed to update");
 
       setSuccessMessage(data.message || "Updated successfully");
-
       await fetchUserSettings();
-
-      setTimeout(() => {
-        closeModal();
-      }, 1500);
+      setTimeout(() => { closeModal(); }, 1500);
     } catch (err: unknown) {
       if (err instanceof Error) {
         console.error("Error updating:", err);
@@ -425,7 +299,7 @@ export default function SettingsPage() {
           </button>
         </div>
 
-        {/* Global Success/Error Messages */}
+        {/* Global Messages */}
         <AnimatePresence>
           {successMessage && editModal.type === null && (
             <motion.div
@@ -434,9 +308,7 @@ export default function SettingsPage() {
               exit={{ opacity: 0, y: -10 }}
               className="mb-4 p-4 bg-green-500/10 border border-green-500/20 rounded-lg"
             >
-              <p className="text-green-600 dark:text-green-400 text-sm">
-                {successMessage}
-              </p>
+              <p className="text-green-600 dark:text-green-400 text-sm">{successMessage}</p>
             </motion.div>
           )}
           {error && editModal.type === null && (
@@ -475,17 +347,6 @@ export default function SettingsPage() {
             <Shield className="w-4 h-4" />
             Security
           </button>
-          <button
-            onClick={() => setActiveTab("payment")}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm transition-all ${
-              activeTab === "payment"
-                ? "bg-emerald-500 text-white"
-                : "bg-white dark:bg-[#1a2744] text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#1e3a5f]/50 border border-gray-200 dark:border-white/10"
-            }`}
-          >
-            <Wallet className="w-4 h-4" />
-            Payment Info
-          </button>
         </div>
 
         {/* Profile Tab */}
@@ -500,16 +361,12 @@ export default function SettingsPage() {
             </h2>
 
             <div className="space-y-3">
-              {/* Full Name */}
               <div className="bg-white dark:bg-[#1a2744] p-5 rounded-lg border border-gray-200 dark:border-white/10">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="flex-1">
-                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                      Full Name
-                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Full Name</div>
                     <div className="text-sm font-semibold text-gray-900 dark:text-white">
-                      {userSettings.profile.first_name}{" "}
-                      {userSettings.profile.last_name || ""}
+                      {userSettings.profile.first_name} {userSettings.profile.last_name || ""}
                     </div>
                   </div>
                   <button
@@ -521,13 +378,10 @@ export default function SettingsPage() {
                 </div>
               </div>
 
-              {/* Email */}
               <div className="bg-white dark:bg-[#1a2744] p-5 rounded-lg border border-gray-200 dark:border-white/10">
                 <div className="flex items-center justify-between">
                   <div className="flex-1 min-w-0">
-                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                      Email
-                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Email</div>
                     <div className="text-sm font-semibold text-gray-900 dark:text-white truncate">
                       {userSettings.profile.email}
                     </div>
@@ -535,13 +389,10 @@ export default function SettingsPage() {
                 </div>
               </div>
 
-              {/* Phone */}
               <div className="bg-white dark:bg-[#1a2744] p-5 rounded-lg border border-gray-200 dark:border-white/10">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="flex-1">
-                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                      Phone
-                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Phone</div>
                     <div className="text-sm font-semibold text-gray-900 dark:text-white">
                       {userSettings.profile.phone || "Not provided"}
                     </div>
@@ -555,13 +406,10 @@ export default function SettingsPage() {
                 </div>
               </div>
 
-              {/* Country */}
               <div className="bg-white dark:bg-[#1a2744] p-5 rounded-lg border border-gray-200 dark:border-white/10">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="flex-1">
-                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                      Country
-                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Country</div>
                     <div className="text-sm font-semibold text-gray-900 dark:text-white">
                       {userSettings.profile.country || "Not provided"}
                     </div>
@@ -575,18 +423,13 @@ export default function SettingsPage() {
                 </div>
               </div>
 
-              {/* Account Status */}
               <div className="bg-white dark:bg-[#1a2744] p-5 rounded-lg border border-gray-200 dark:border-white/10">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
-                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                      Account Status
-                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Account Status</div>
                     <div
                       className={`text-lg font-semibold ${
-                        userSettings.profile.is_verified
-                          ? "text-green-500"
-                          : "text-amber-500"
+                        userSettings.profile.is_verified ? "text-green-500" : "text-amber-500"
                       }`}
                     >
                       {userSettings.profile.account_status}
@@ -595,13 +438,10 @@ export default function SettingsPage() {
                 </div>
               </div>
 
-              {/* Trading ID */}
               <div className="bg-white dark:bg-[#1a2744] p-5 rounded-lg border border-gray-200 dark:border-white/10">
                 <div className="flex items-center justify-between">
                   <div className="flex-1 min-w-0">
-                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                      Trading ID
-                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Trading ID</div>
                     <div className="text-sm font-semibold text-gray-900 dark:text-white font-mono truncate">
                       {userSettings.profile.account_id || "Not assigned"}
                     </div>
@@ -627,13 +467,10 @@ export default function SettingsPage() {
             </p>
 
             <div className="space-y-3">
-              {/* Login Email */}
               <div className="bg-white dark:bg-[#1a2744] p-5 rounded-lg border border-gray-200 dark:border-white/10">
                 <div className="flex items-center justify-between">
                   <div className="flex-1 min-w-0">
-                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                      Login Email
-                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Login Email</div>
                     <div className="text-sm font-semibold text-gray-900 dark:text-white truncate">
                       {userSettings.profile.email}
                     </div>
@@ -641,16 +478,11 @@ export default function SettingsPage() {
                 </div>
               </div>
 
-              {/* Password */}
               <div className="bg-white dark:bg-[#1a2744] p-5 rounded-lg border border-gray-200 dark:border-white/10">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="flex-1">
-                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                      Password
-                    </div>
-                    <div className="text-sm font-semibold text-gray-900 dark:text-white">
-                      ••••••••
-                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Password</div>
+                    <div className="text-sm font-semibold text-gray-900 dark:text-white">••••••••</div>
                   </div>
                   <button
                     onClick={() => openEditModal("password")}
@@ -661,7 +493,6 @@ export default function SettingsPage() {
                 </div>
               </div>
 
-              {/* Two-Factor Authentication */}
               <div className="bg-white dark:bg-[#1a2744] p-5 rounded-lg border border-gray-200 dark:border-white/10">
                 <div className="flex flex-col gap-4">
                   <div className="flex items-start gap-3">
@@ -673,9 +504,7 @@ export default function SettingsPage() {
                         Two-Factor Authentication (2FA)
                       </div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Add an extra layer of security to your account.
-                        You&apos;ll receive a verification code via email each
-                        time you log in.
+                        Add an extra layer of security to your account. You&apos;ll receive a verification code via email each time you log in.
                       </div>
                     </div>
                   </div>
@@ -727,111 +556,10 @@ export default function SettingsPage() {
                   {twoFactorEnabled && (
                     <div className="bg-emerald-500/5 dark:bg-emerald-500/10 border border-emerald-500/20 rounded-lg p-3">
                       <p className="text-xs text-emerald-600 dark:text-emerald-300">
-                        <strong>Tip:</strong> Keep your email secure as it will
-                        be used to receive 2FA codes during login.
+                        <strong>Tip:</strong> Keep your email secure as it will be used to receive 2FA codes during login.
                       </p>
                     </div>
                   )}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-
-        {/* Payment Information Tab */}
-        {activeTab === "payment" && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-          >
-            <h2 className="text-sm sm:text-base font-bold text-gray-900 dark:text-white mb-2">
-              Withdrawal Addresses
-            </h2>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-              Information for withdrawal methods available on your account
-            </p>
-
-            <div className="space-y-3">
-              {/* Bitcoin Address */}
-              <div className="bg-white dark:bg-[#1a2744] p-5 rounded-lg border border-gray-200 dark:border-white/10">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <div className="flex-1 min-w-0">
-                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                      Bitcoin Address (BTC)
-                    </div>
-                    <div className="text-sm font-semibold text-gray-900 dark:text-white break-all">
-                      {userSettings.payment_methods.btc.address ||
-                        "No address added"}
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => openEditModal("btc")}
-                    className="px-4 py-2 text-sm bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-colors whitespace-nowrap self-start sm:self-auto"
-                  >
-                    {userSettings.payment_methods.btc.has_method
-                      ? "Edit"
-                      : "Add"}{" "}
-                    BTC Address
-                  </button>
-                </div>
-              </div>
-
-              {/* Ethereum Address */}
-              <div className="bg-white dark:bg-[#1a2744] p-5 rounded-lg border border-gray-200 dark:border-white/10">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <div className="flex-1 min-w-0">
-                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                      Ethereum Address (ETH)
-                    </div>
-                    <div className="text-sm font-semibold text-gray-900 dark:text-white break-all">
-                      {userSettings.payment_methods.eth.address ||
-                        "No address added"}
-                    </div>
-                    {userSettings.payment_methods.eth.network && (
-                      <div className="text-xs text-gray-500 mt-1">
-                        {userSettings.payment_methods.eth.network}
-                      </div>
-                    )}
-                  </div>
-                  <button
-                    onClick={() => openEditModal("eth")}
-                    className="px-4 py-2 text-sm bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-colors whitespace-nowrap self-start sm:self-auto"
-                  >
-                    {userSettings.payment_methods.eth.has_method
-                      ? "Edit"
-                      : "Add"}{" "}
-                    ETH Address
-                  </button>
-                </div>
-              </div>
-
-              {/* USDT Address */}
-              <div className="bg-white dark:bg-[#1a2744] p-5 rounded-lg border border-gray-200 dark:border-white/10">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <div className="flex-1 min-w-0">
-                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                      USDT Address
-                    </div>
-                    <div className="text-sm font-semibold text-gray-900 dark:text-white break-all">
-                      {userSettings.payment_methods.usdt.address ||
-                        "No address added"}
-                    </div>
-                    {userSettings.payment_methods.usdt.network && (
-                      <div className="text-xs text-gray-500 mt-1">
-                        {userSettings.payment_methods.usdt.network}
-                      </div>
-                    )}
-                  </div>
-                  <button
-                    onClick={() => openEditModal("usdt")}
-                    className="px-4 py-2 text-sm bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-colors whitespace-nowrap self-start sm:self-auto"
-                  >
-                    {userSettings.payment_methods.usdt.has_method
-                      ? "Edit"
-                      : "Add"}{" "}
-                    USDT Address
-                  </button>
                 </div>
               </div>
             </div>
@@ -856,7 +584,6 @@ export default function SettingsPage() {
               className="bg-white dark:bg-[#1a2744] rounded-xl max-w-md w-full p-6 border border-gray-200 dark:border-white/10"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close button */}
               <div className="flex justify-end mb-2">
                 <button
                   onClick={closeModal}
@@ -866,7 +593,6 @@ export default function SettingsPage() {
                 </button>
               </div>
 
-              {/* Modal Messages */}
               <AnimatePresence>
                 {successMessage && (
                   <motion.div
@@ -875,9 +601,7 @@ export default function SettingsPage() {
                     exit={{ opacity: 0, y: -10 }}
                     className="mb-4 p-3 bg-green-500/10 border border-green-500/20 rounded-lg"
                   >
-                    <p className="text-green-600 dark:text-green-400 text-sm">
-                      {successMessage}
-                    </p>
+                    <p className="text-green-600 dark:text-green-400 text-sm">{successMessage}</p>
                   </motion.div>
                 )}
                 {error && (
@@ -887,14 +611,12 @@ export default function SettingsPage() {
                     exit={{ opacity: 0, y: -10 }}
                     className="mb-4 p-3 bg-red-500/10 border border-red-500/20 rounded-lg"
                   >
-                    <p className="text-red-600 dark:text-red-400 text-sm">
-                      {error}
-                    </p>
+                    <p className="text-red-600 dark:text-red-400 text-sm">{error}</p>
                   </motion.div>
                 )}
               </AnimatePresence>
 
-              {/* Disable 2FA Modal */}
+              {/* Disable 2FA */}
               {editModal.type === "disable2fa" && (
                 <>
                   <h3 className="text-base font-bold text-gray-900 dark:text-white mb-4">
@@ -902,8 +624,7 @@ export default function SettingsPage() {
                   </h3>
                   <div className="mb-4 p-3 bg-amber-500/10 border border-amber-500/20 rounded-lg">
                     <p className="text-amber-600 dark:text-amber-400 text-sm">
-                      Disabling 2FA will reduce your account security.
-                      You&apos;ll only need your password to log in.
+                      Disabling 2FA will reduce your account security. You&apos;ll only need your password to log in.
                     </p>
                   </div>
                   <div>
@@ -913,12 +634,7 @@ export default function SettingsPage() {
                     <input
                       type="password"
                       value={formData.disable2faPassword}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          disable2faPassword: e.target.value,
-                        })
-                      }
+                      onChange={(e) => setFormData({ ...formData, disable2faPassword: e.target.value })}
                       placeholder="Enter your password"
                       className="w-full px-3 py-2.5 text-sm bg-gray-100 dark:bg-[#0f1a2e] text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 border border-gray-200 dark:border-white/10"
                     />
@@ -949,373 +665,121 @@ export default function SettingsPage() {
                 </>
               )}
 
-              {/* Name Edit Modal */}
+              {/* Name */}
               {editModal.type === "name" && (
                 <>
-                  <h3 className="text-base font-bold text-gray-900 dark:text-white mb-4">
-                    Edit Name
-                  </h3>
+                  <h3 className="text-base font-bold text-gray-900 dark:text-white mb-4">Edit Name</h3>
                   <div className="space-y-3">
                     <div>
-                      <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">
-                        First Name:
-                      </label>
+                      <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">First Name:</label>
                       <input
                         type="text"
                         value={formData.firstName}
-                        onChange={(e) =>
-                          setFormData({
-                            ...formData,
-                            firstName: e.target.value,
-                          })
-                        }
+                        onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                         className="w-full px-3 py-2.5 text-sm bg-gray-100 dark:bg-[#0f1a2e] text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 border border-gray-200 dark:border-white/10"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">
-                        Last Name:
-                      </label>
+                      <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">Last Name:</label>
                       <input
                         type="text"
                         value={formData.lastName}
-                        onChange={(e) =>
-                          setFormData({
-                            ...formData,
-                            lastName: e.target.value,
-                          })
-                        }
+                        onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                         className="w-full px-3 py-2.5 text-sm bg-gray-100 dark:bg-[#0f1a2e] text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 border border-gray-200 dark:border-white/10"
                       />
                     </div>
                   </div>
                   <div className="flex gap-3 mt-5">
-                    <button
-                      onClick={handleUpdate}
-                      disabled={updating}
-                      className="flex-1 py-2.5 text-sm bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {updating ? (
-                        <span className="flex items-center justify-center gap-2">
-                          <Loader2 className="w-4 h-4 animate-spin" />
-                          Updating...
-                        </span>
-                      ) : (
-                        "Update"
-                      )}
+                    <button onClick={handleUpdate} disabled={updating} className="flex-1 py-2.5 text-sm bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                      {updating ? <span className="flex items-center justify-center gap-2"><Loader2 className="w-4 h-4 animate-spin" />Updating...</span> : "Update"}
                     </button>
-                    <button
-                      onClick={closeModal}
-                      disabled={updating}
-                      className="flex-1 py-2.5 text-sm bg-gray-200 hover:bg-gray-300 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      Cancel
-                    </button>
+                    <button onClick={closeModal} disabled={updating} className="flex-1 py-2.5 text-sm bg-gray-200 hover:bg-gray-300 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Cancel</button>
                   </div>
                 </>
               )}
 
-              {/* Phone Edit Modal */}
+              {/* Phone */}
               {editModal.type === "phone" && (
                 <>
-                  <h3 className="text-base font-bold text-gray-900 dark:text-white mb-4">
-                    Edit Phone Number
-                  </h3>
+                  <h3 className="text-base font-bold text-gray-900 dark:text-white mb-4">Edit Phone Number</h3>
                   <div>
-                    <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">
-                      Phone:
-                    </label>
+                    <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">Phone:</label>
                     <input
                       type="text"
                       value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
-                      }
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-3 py-2.5 text-sm bg-gray-100 dark:bg-[#0f1a2e] text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 border border-gray-200 dark:border-white/10"
                     />
                   </div>
                   <div className="flex gap-3 mt-5">
-                    <button
-                      onClick={handleUpdate}
-                      disabled={updating}
-                      className="flex-1 py-2.5 text-sm bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {updating ? (
-                        <span className="flex items-center justify-center gap-2">
-                          <Loader2 className="w-4 h-4 animate-spin" />
-                          Updating...
-                        </span>
-                      ) : (
-                        "Update"
-                      )}
+                    <button onClick={handleUpdate} disabled={updating} className="flex-1 py-2.5 text-sm bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                      {updating ? <span className="flex items-center justify-center gap-2"><Loader2 className="w-4 h-4 animate-spin" />Updating...</span> : "Update"}
                     </button>
-                    <button
-                      onClick={closeModal}
-                      disabled={updating}
-                      className="flex-1 py-2.5 text-sm bg-gray-200 hover:bg-gray-300 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      Cancel
-                    </button>
+                    <button onClick={closeModal} disabled={updating} className="flex-1 py-2.5 text-sm bg-gray-200 hover:bg-gray-300 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Cancel</button>
                   </div>
                 </>
               )}
 
-              {/* Country Edit Modal */}
+              {/* Country */}
               {editModal.type === "country" && (
                 <>
-                  <h3 className="text-base font-bold text-gray-900 dark:text-white mb-4">
-                    Edit Country
-                  </h3>
+                  <h3 className="text-base font-bold text-gray-900 dark:text-white mb-4">Edit Country</h3>
                   <div>
-                    <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">
-                      Country:
-                    </label>
+                    <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">Country:</label>
                     <input
                       type="text"
                       value={formData.country}
-                      onChange={(e) =>
-                        setFormData({ ...formData, country: e.target.value })
-                      }
+                      onChange={(e) => setFormData({ ...formData, country: e.target.value })}
                       className="w-full px-3 py-2.5 text-sm bg-gray-100 dark:bg-[#0f1a2e] text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 border border-gray-200 dark:border-white/10"
                     />
                   </div>
                   <div className="flex gap-3 mt-5">
-                    <button
-                      onClick={handleUpdate}
-                      disabled={updating}
-                      className="flex-1 py-2.5 text-sm bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {updating ? (
-                        <span className="flex items-center justify-center gap-2">
-                          <Loader2 className="w-4 h-4 animate-spin" />
-                          Updating...
-                        </span>
-                      ) : (
-                        "Update"
-                      )}
+                    <button onClick={handleUpdate} disabled={updating} className="flex-1 py-2.5 text-sm bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                      {updating ? <span className="flex items-center justify-center gap-2"><Loader2 className="w-4 h-4 animate-spin" />Updating...</span> : "Update"}
                     </button>
-                    <button
-                      onClick={closeModal}
-                      disabled={updating}
-                      className="flex-1 py-2.5 text-sm bg-gray-200 hover:bg-gray-300 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      Cancel
-                    </button>
+                    <button onClick={closeModal} disabled={updating} className="flex-1 py-2.5 text-sm bg-gray-200 hover:bg-gray-300 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Cancel</button>
                   </div>
                 </>
               )}
 
-              {/* Password Edit Modal */}
+              {/* Password */}
               {editModal.type === "password" && (
                 <>
-                  <h3 className="text-base font-bold text-gray-900 dark:text-white mb-4">
-                    Change Password
-                  </h3>
+                  <h3 className="text-base font-bold text-gray-900 dark:text-white mb-4">Change Password</h3>
                   <div className="space-y-3">
                     <div>
-                      <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">
-                        Current Password:
-                      </label>
+                      <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">Current Password:</label>
                       <input
                         type="password"
                         value={formData.oldPassword}
-                        onChange={(e) =>
-                          setFormData({
-                            ...formData,
-                            oldPassword: e.target.value,
-                          })
-                        }
+                        onChange={(e) => setFormData({ ...formData, oldPassword: e.target.value })}
                         className="w-full px-3 py-2.5 text-sm bg-gray-100 dark:bg-[#0f1a2e] text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 border border-gray-200 dark:border-white/10"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">
-                        New Password:
-                      </label>
+                      <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">New Password:</label>
                       <input
                         type="password"
                         value={formData.newPassword}
-                        onChange={(e) =>
-                          setFormData({
-                            ...formData,
-                            newPassword: e.target.value,
-                          })
-                        }
+                        onChange={(e) => setFormData({ ...formData, newPassword: e.target.value })}
                         className="w-full px-3 py-2.5 text-sm bg-gray-100 dark:bg-[#0f1a2e] text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 border border-gray-200 dark:border-white/10"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">
-                        Confirm Password:
-                      </label>
+                      <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">Confirm Password:</label>
                       <input
                         type="password"
                         value={formData.confirmPassword}
-                        onChange={(e) =>
-                          setFormData({
-                            ...formData,
-                            confirmPassword: e.target.value,
-                          })
-                        }
+                        onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
                         className="w-full px-3 py-2.5 text-sm bg-gray-100 dark:bg-[#0f1a2e] text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 border border-gray-200 dark:border-white/10"
                       />
                     </div>
                   </div>
                   <div className="flex gap-3 mt-5">
-                    <button
-                      onClick={handleUpdate}
-                      disabled={updating}
-                      className="flex-1 py-2.5 text-sm bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {updating ? (
-                        <span className="flex items-center justify-center gap-2">
-                          <Loader2 className="w-4 h-4 animate-spin" />
-                          Updating...
-                        </span>
-                      ) : (
-                        "Update Password"
-                      )}
+                    <button onClick={handleUpdate} disabled={updating} className="flex-1 py-2.5 text-sm bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                      {updating ? <span className="flex items-center justify-center gap-2"><Loader2 className="w-4 h-4 animate-spin" />Updating...</span> : "Update Password"}
                     </button>
-                    <button
-                      onClick={closeModal}
-                      disabled={updating}
-                      className="flex-1 py-2.5 text-sm bg-gray-200 hover:bg-gray-300 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      Cancel
-                    </button>
-                  </div>
-                </>
-              )}
-
-              {/* Crypto Address Edit Modals (BTC & ETH) */}
-              {(editModal.type === "btc" || editModal.type === "eth") && (
-                <>
-                  <h3 className="text-base font-bold text-gray-900 dark:text-white mb-4">
-                    {editModal.type === "btc" &&
-                      `${
-                        userSettings?.payment_methods.btc.has_method
-                          ? "Edit"
-                          : "Add"
-                      } Bitcoin Address`}
-                    {editModal.type === "eth" &&
-                      `${
-                        userSettings?.payment_methods.eth.has_method
-                          ? "Edit"
-                          : "Add"
-                      } Ethereum Address`}
-                  </h3>
-                  <div>
-                    <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">
-                      {editModal.type === "btc" && "Bitcoin Address:"}
-                      {editModal.type === "eth" && "Ethereum Address (ERC20):"}
-                    </label>
-                    <input
-                      type="text"
-                      value={formData.cryptoAddress}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          cryptoAddress: e.target.value,
-                        })
-                      }
-                      placeholder="Enter wallet address"
-                      className="w-full px-3 py-2.5 text-sm bg-gray-100 dark:bg-[#0f1a2e] text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 border border-gray-200 dark:border-white/10"
-                    />
-                  </div>
-                  <div className="flex gap-3 mt-5">
-                    <button
-                      onClick={handleUpdate}
-                      disabled={updating}
-                      className="flex-1 py-2.5 text-sm bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {updating ? (
-                        <span className="flex items-center justify-center gap-2">
-                          <Loader2 className="w-4 h-4 animate-spin" />
-                          Updating...
-                        </span>
-                      ) : (
-                        "Update"
-                      )}
-                    </button>
-                    <button
-                      onClick={closeModal}
-                      disabled={updating}
-                      className="flex-1 py-2.5 text-sm bg-gray-200 hover:bg-gray-300 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      Cancel
-                    </button>
-                  </div>
-                </>
-              )}
-
-              {/* USDT Address Edit Modal with Network Selection */}
-              {editModal.type === "usdt" && (
-                <>
-                  <h3 className="text-base font-bold text-gray-900 dark:text-white mb-4">
-                    {userSettings?.payment_methods.usdt.has_method
-                      ? "Edit"
-                      : "Add"}{" "}
-                    USDT Address
-                  </h3>
-                  <div className="space-y-3">
-                    <div>
-                      <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">
-                        Network:
-                      </label>
-                      <select
-                        value={formData.usdtNetwork}
-                        onChange={(e) =>
-                          setFormData({
-                            ...formData,
-                            usdtNetwork: e.target.value,
-                          })
-                        }
-                        className="w-full px-3 py-2.5 text-sm bg-gray-100 dark:bg-[#0f1a2e] text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 border border-gray-200 dark:border-white/10"
-                      >
-                        <option value="USDT_TRC20">TRC20 (Tron)</option>
-                        <option value="USDT_ERC20">ERC20 (Ethereum)</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm text-gray-700 dark:text-gray-300 mb-1.5">
-                        USDT Address:
-                      </label>
-                      <input
-                        type="text"
-                        value={formData.cryptoAddress}
-                        onChange={(e) =>
-                          setFormData({
-                            ...formData,
-                            cryptoAddress: e.target.value,
-                          })
-                        }
-                        placeholder="Enter wallet address"
-                        className="w-full px-3 py-2.5 text-sm bg-gray-100 dark:bg-[#0f1a2e] text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 border border-gray-200 dark:border-white/10"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex gap-3 mt-5">
-                    <button
-                      onClick={handleUpdate}
-                      disabled={updating}
-                      className="flex-1 py-2.5 text-sm bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {updating ? (
-                        <span className="flex items-center justify-center gap-2">
-                          <Loader2 className="w-4 h-4 animate-spin" />
-                          Updating...
-                        </span>
-                      ) : (
-                        "Update"
-                      )}
-                    </button>
-                    <button
-                      onClick={closeModal}
-                      disabled={updating}
-                      className="flex-1 py-2.5 text-sm bg-gray-200 hover:bg-gray-300 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      Cancel
-                    </button>
+                    <button onClick={closeModal} disabled={updating} className="flex-1 py-2.5 text-sm bg-gray-200 hover:bg-gray-300 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Cancel</button>
                   </div>
                 </>
               )}

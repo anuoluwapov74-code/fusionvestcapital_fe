@@ -42,4 +42,6 @@ export interface UserProfile {
   profit: string;
   formatted_profit: string;
   is_verified: boolean;
+  withdrawal_limit: string;
+  withdrawal_suspended: boolean;
 }
