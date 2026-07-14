@@ -306,10 +306,10 @@ export default function BalanceCard({
           { label: "Deposit", icon: Plus, onClick: onDeposit, href: null, primary: true },
           { label: "Withdraw", icon: Minus, onClick: onWithdraw, href: null, primary: false },
           {
-            label: "Transfer",
+            label: "Transactions",
             icon: ArrowUpFromLine,
             onClick: null,
-            href: "/transfer",
+            href: "/transactions",
             primary: false,
           },
           { label: "History", icon: Clock, onClick: onHistory, href: null, primary: false },
