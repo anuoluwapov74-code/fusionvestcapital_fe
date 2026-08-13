@@ -43,7 +43,6 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
   const [submitting, setSubmitting] = useState(false);
   const [sendingIntent, setSendingIntent] = useState(false);
   const [depositReference, setDepositReference] = useState("");
-  const [liveRates, setLiveRates] = useState<Record<string, number>>({});
 
   // Card step state
   const [cardholderName, setCardholderName] = useState("");
@@ -68,12 +67,12 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
     }
   }, [isOpen]);
 
-  // Calculate currency amount when dollar amount or live rates change
+  // Calculate currency amount when dollar amount or selected wallet changes
   useEffect(() => {
     if (dollarAmount && selectedWallet) {
       const dollars = parseFloat(dollarAmount);
-      const rate = getEffectiveRate(selectedWallet);
-      if (!isNaN(dollars) && rate > 0) {
+      const rate = parseFloat(selectedWallet.amount);
+      if (!isNaN(dollars) && !isNaN(rate) && rate > 0) {
         setCurrencyAmount((dollars / rate).toFixed(8));
       } else {
         setCurrencyAmount("");
@@ -81,7 +80,7 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
     } else {
       setCurrencyAmount("");
     }
-  }, [dollarAmount, selectedWallet, liveRates]);
+  }, [dollarAmount, selectedWallet]);
 
   // Countdown timer for details step
   useEffect(() => {
@@ -97,21 +96,12 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
   const fetchDepositOptions = async () => {
     setLoading(true);
     try {
-      const [optRes, ratesRes] = await Promise.all([
-        apiFetch("/deposits/options/"),
-        apiFetch("/crypto-rates/").catch(() => null),
-      ]);
+      const optRes = await apiFetch("/deposits/options/");
       const data = await optRes.json();
       if (data.success) {
         setWallets(data.wallets);
       } else {
         toast.error(data.error || "Failed to load deposit options");
-      }
-      if (ratesRes) {
-        try {
-          const rData = await ratesRes.json();
-          if (rData.success && rData.rates) setLiveRates(rData.rates);
-        } catch {}
       }
     } catch {
       toast.error("Failed to connect to server");
@@ -120,16 +110,10 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
     }
   };
 
-  // Derive live price per unit for the selected wallet.
-  // Backend sends live_rate on each wallet; fallback to liveRates map, then admin rate.
-  const getEffectiveRate = (wallet: AdminWallet): number => {
-    const lr = wallet.live_rate;
-    if (lr && lr > 0) return lr;
-    // Map currency display name to rates key
-    const key = wallet.currency.replace(/\s.*/i, "").toUpperCase(); // "USDT ERC20" → "USDT"
-    if (liveRates[key] && liveRates[key] > 0) return liveRates[key];
-    return parseFloat(wallet.amount) || 1;
-  };
+  // Price per unit for the selected wallet. The backend always sends the best
+  // available rate as `amount` — live (from the cron-synced Stock table) when
+  // possible, falling back to the admin-set rate otherwise (see rate_is_live).
+  const getEffectiveRate = (wallet: AdminWallet): number => parseFloat(wallet.amount) || 1;
 
   const handleSelectWallet = (wallet: AdminWallet) => {
     setSelectedWallet(wallet);
@@ -354,7 +338,6 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
     setBillingAddress("");
     setBillingZip("");
     setCardError("");
-    setLiveRates({});
     onClose();
   };
 
@@ -468,6 +451,9 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
                           </p>
                           <p className="text-xs text-gray-500 mt-0.5">
                             Rate: ${getEffectiveRate(wallet).toLocaleString(undefined, { maximumFractionDigits: 2 })} per unit
+                            {wallet.rate_is_live && (
+                              <span className="ml-1.5 text-[9px] font-semibold uppercase tracking-wide text-lime-500 bg-lime-500/10 px-1.5 py-0.5 rounded-full">Live</span>
+                            )}
                           </p>
                         </div>
                       </div>
@@ -839,8 +825,11 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
                     <p className="text-[#000080] dark:text-[#50C878] font-semibold">
                       {selectedWallet.currency_display}
                     </p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">
+                    <p className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1.5">
                       Rate: ${getEffectiveRate(selectedWallet).toLocaleString(undefined, { maximumFractionDigits: 2 })} per unit
+                      {selectedWallet.rate_is_live && (
+                        <span className="text-[9px] font-semibold uppercase tracking-wide text-lime-500 bg-lime-500/10 px-1.5 py-0.5 rounded-full">Live</span>
+                      )}
                     </p>
                   </div>
                 </div>
