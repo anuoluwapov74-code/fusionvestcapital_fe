@@ -262,9 +262,10 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
                 style={{ background: "rgba(80,200,120,0.08)", border: `1px solid rgba(80,200,120,0.25)` }}
               >
                 <ShieldAlert className="w-4 h-4 shrink-0 mt-0.5" style={{ color: EMERALD }} />
+                
                 <p className="text-[11.5px] leading-snug text-gray-700 dark:text-gray-300">
-                  <span className="font-bold text-gray-900 dark:text-white">Sending payment is not enough.</span>{" "}
-                  We only know you paid once you upload your receipt and press Submit below. Skip this step and your deposit will not be credited.
+                  
+                  Kindly ensure you upload your payment receipt for <span className="font-bold text-gray-900 dark:text-white">DOCUMENTATION PURPOSE</span> before clicking on <span className="font-bold text-gray-900 dark:text-white">Submit Deposit</span>
                 </p>
               </div>
 
