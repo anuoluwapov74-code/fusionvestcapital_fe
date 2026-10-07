@@ -312,7 +312,7 @@ export default function EndUserLicenseAgreement() {
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 If you have any questions about this End User License Agreement, please
                 contact us at{" "}
-                <span className="text-[#000080] dark:text-[#50C878]">support@fusionvestcapital.com</span>. Our team
+                <span className="text-[#000080] dark:text-[#50C878]">support@fusionsvest.com</span>. Our team
                 is available to assist you with any inquiries regarding your rights and
                 obligations under this agreement.
               </p>

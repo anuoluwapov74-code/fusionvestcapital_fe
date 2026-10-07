@@ -171,7 +171,7 @@ export default function CookiesPolicy() {
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 To opt out or manage your cookie preferences, please email us at{" "}
-                <span className="text-[#000080] dark:text-[#50C878]">support@fusionvestcapital.com</span>. Our team
+                <span className="text-[#000080] dark:text-[#50C878]">support@fusionsvest.com</span>. Our team
                 will assist you with updating your preferences promptly.
               </p>
             </section>

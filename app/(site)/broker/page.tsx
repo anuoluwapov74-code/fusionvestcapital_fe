@@ -365,10 +365,10 @@ export default function BrokerPartnership() {
               hours.
             </p>
             <Link
-              href="mailto:partnerships@fusionvestcapital.com"
+              href="mailto:partnerships@fusionsvest.com"
               className="text-[#000080] dark:text-[#50C878] hover:text-[#0000b3] dark:hover:text-[#6de496] font-medium transition"
             >
-              support@fusionvestcapital.com
+              support@fusionsvest.com
             </Link>
           </div>
         </section>

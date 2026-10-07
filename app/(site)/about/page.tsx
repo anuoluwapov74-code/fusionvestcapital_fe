@@ -217,10 +217,10 @@ export default function AboutPage() {
                 Have questions about FUSIONVEST CAPITAL? We&apos;d love to hear from
                 you. Reach out to our team at{" "}
                 <a
-                  href="mailto:support@fusionvestcapital.com"
+                  href="mailto:support@fusionsvest.com"
                   className="text-[#000080] dark:text-[#50C878] hover:text-[#0000b3] dark:hover:text-[#6de496] underline"
                 >
-                  support@fusionvestcapital.com
+                  support@fusionsvest.com
                 </a>{" "}
                 or start a conversation through our live chat.
               </p>

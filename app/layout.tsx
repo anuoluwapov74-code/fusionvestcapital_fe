@@ -19,7 +19,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fusionvestcapital.com"),
+  metadataBase: new URL("https://fusionsvest.com"),
   title: {
     default: "FUSIONVEST CAPITAL - Copy Futures, Options & Contracts with Precision",
     template: "%s | FUSIONVEST CAPITAL",
@@ -36,14 +36,14 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    url: "https://fusionvestcapital.com",
+    url: "https://fusionsvest.com",
     siteName: "FUSIONVEST CAPITAL",
     title: "FUSIONVEST CAPITAL - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
     images: [
       {
-        url: "https://fusionvestcapital.com/og-image.png",
+        url: "https://fusionsvest.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "FUSIONVEST CAPITAL - Social Copy Trading Platform",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "FUSIONVEST CAPITAL - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
-    images: ["https://fusionvestcapital.com/og-image.png"],
+    images: ["https://fusionsvest.com/og-image.png"],
   },
   icons: {
     icon: [

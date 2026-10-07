@@ -263,7 +263,7 @@ export default function UserGuide() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#000080] dark:text-[#50C878] font-bold">&#8226;</span>
-                  <span><strong>Email support</strong> — Reach us at support@fusionvestcapital.com</span>
+                  <span><strong>Email support</strong> — Reach us at support@fusionsvest.com</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#000080] dark:text-[#50C878] font-bold">&#8226;</span>

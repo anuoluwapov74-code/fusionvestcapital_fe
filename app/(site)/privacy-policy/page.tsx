@@ -198,7 +198,7 @@ export default function PrivacyPolicy() {
                 Please note that opting out of certain data processing activities may
                 limit your ability to use some features of our platform. To exercise any
                 of these rights, please contact us at{" "}
-                <span className="text-[#000080] dark:text-[#50C878]">support@fusionvestcapital.com</span>.
+                <span className="text-[#000080] dark:text-[#50C878]">support@fusionsvest.com</span>.
               </p>
             </section>
 

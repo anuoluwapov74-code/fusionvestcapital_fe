@@ -27,6 +27,6 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: "https://fusionvestcapital.com/sitemap.xml",
+    sitemap: "https://fusionsvest.com/sitemap.xml",
   };
 }

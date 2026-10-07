@@ -89,7 +89,7 @@ const Footer = () => {
                 title="CONTACT"
                 links={[
                   { label: "+1 (929) 512-0241", href: "#" },
-                  { label: "support@fusionvestcapital.com", href: "mailto:support@fusionvestcapital.com" },
+                  { label: "support@fusionsvest.com", href: "mailto:support@fusionsvest.com" },
                 ]}
               />
             </div>
