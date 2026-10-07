@@ -20,7 +20,7 @@ export default function BrokerPartnership() {
             </h1>
             <p className="mt-6 text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl mx-auto">
               You can be the first brokerage industry innovation. With
-              FUSIONVEST CAPITAL, alongside your Traders and restart your profits
+              FUSION VEST, alongside your Traders and restart your profits
               manifold.
             </p>
             <div className="mt-10">
@@ -340,7 +340,7 @@ export default function BrokerPartnership() {
             </h2>
             <p className="mt-5 text-gray-600 dark:text-gray-400 leading-relaxed">
               Join the leading brokers who have already partnered with
-              FUSIONVEST CAPITAL. Let&apos;s grow together.
+              FUSION VEST. Let&apos;s grow together.
             </p>
             <div className="mt-8">
               <Link

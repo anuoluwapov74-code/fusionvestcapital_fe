@@ -264,7 +264,7 @@ export default function LoginPage() {
           
           <div className="text-center mt-1 text-sm space-y-2.5">
             <p className="text-gray-400 dark:text-white">
-              Copyright &copy; {new Date().getFullYear()} FusionVest Capitals
+              Copyright &copy; {new Date().getFullYear()} Fusion Vest
             </p>
             {/* <div className="flex items-center justify-center gap-4">
               <Link className="text-blue-500 hover:underline" href={"/"}>

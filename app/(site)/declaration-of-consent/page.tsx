@@ -27,10 +27,10 @@ export default function DeclarationOfConsent() {
                 1. Your Consent Matters
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                At FUSIONVEST CAPITAL, we believe in transparency and informed consent. This
+                At FUSION VEST, we believe in transparency and informed consent. This
                 Declaration of Consent outlines the specific consents you provide when
                 you register for an account, use our services, and interact with our
-                platform. By using FUSIONVEST CAPITAL, you acknowledge and agree to the consents
+                platform. By using FUSION VEST, you acknowledge and agree to the consents
                 described below. We encourage you to read this document carefully and
                 contact us if you have any questions.
               </p>
@@ -42,7 +42,7 @@ export default function DeclarationOfConsent() {
                 2. Consent to Terms and Policies
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                By creating an account with FUSIONVEST CAPITAL, you confirm that you have read,
+                By creating an account with FUSION VEST, you confirm that you have read,
                 understood, and agree to be bound by our{" "}
                 <Link
                   href="/terms-of-service"
@@ -73,7 +73,7 @@ export default function DeclarationOfConsent() {
                 </Link>
                 , and all other applicable policies and agreements. You acknowledge that
                 these documents form a legally binding agreement between you and
-                FUSIONVEST CAPITAL.
+                FUSION VEST.
               </p>
             </section>
 
@@ -84,7 +84,7 @@ export default function DeclarationOfConsent() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 You consent to the collection, processing, storage, and use of your
-                personal data by FUSIONVEST CAPITAL as described in our Privacy Policy. This
+                personal data by FUSION VEST as described in our Privacy Policy. This
                 includes but is not limited to:
               </p>
               <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed space-y-2">
@@ -116,7 +116,7 @@ export default function DeclarationOfConsent() {
                 4. Consent to Communications
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                You consent to receiving communications from FUSIONVEST CAPITAL, including but not
+                You consent to receiving communications from FUSION VEST, including but not
                 limited to account notifications, transaction confirmations, security
                 alerts, service updates, regulatory notices, and marketing communications.
                 You may opt out of non-essential marketing communications at any time by
@@ -134,7 +134,7 @@ export default function DeclarationOfConsent() {
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 You consent to the use of electronic signatures, records, and
                 communications in connection with your account and transactions with
-                FUSIONVEST CAPITAL. You agree that electronic signatures and records shall have
+                FUSION VEST. You agree that electronic signatures and records shall have
                 the same legal effect, validity, and enforceability as manually executed
                 signatures and paper-based records. You also agree to receive all account
                 statements, confirmations, disclosures, and other communications in
@@ -169,7 +169,7 @@ export default function DeclarationOfConsent() {
                 7. Consent to Identity Verification
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                You consent to FUSIONVEST CAPITAL conducting identity verification checks as
+                You consent to FUSION VEST conducting identity verification checks as
                 required by anti-money laundering (AML) and know-your-customer (KYC)
                 regulations. This may include verifying your identity through
                 government-issued identification documents, conducting background checks
@@ -186,9 +186,9 @@ export default function DeclarationOfConsent() {
                 8. Consent to Recording
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                You consent to FUSIONVEST CAPITAL recording and monitoring telephone
+                You consent to FUSION VEST recording and monitoring telephone
                 conversations, electronic communications, and other interactions between
-                you and FUSIONVEST CAPITAL. These recordings may be used to verify instructions,
+                you and FUSION VEST. These recordings may be used to verify instructions,
                 resolve disputes, ensure compliance with regulatory requirements, improve
                 the quality of our services, and serve as evidence in legal or regulatory
                 proceedings. Recordings will be retained in accordance with applicable
@@ -219,7 +219,7 @@ export default function DeclarationOfConsent() {
                 10. Consent for Minors
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                FUSIONVEST CAPITAL services are only available to individuals who are at least 18
+                FUSION VEST services are only available to individuals who are at least 18
                 years of age (or the age of legal majority in your jurisdiction). By
                 creating an account, you confirm that you meet this age requirement. If we
                 become aware that we have collected personal information from a minor
@@ -234,7 +234,7 @@ export default function DeclarationOfConsent() {
                 11. Updates to This Declaration
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                FUSIONVEST CAPITAL may update this Declaration of Consent from time to time to
+                FUSION VEST may update this Declaration of Consent from time to time to
                 reflect changes in our practices, services, or legal requirements. We will
                 notify you of any material changes by posting the updated declaration on
                 our website and, where appropriate, by sending you a notification. Your

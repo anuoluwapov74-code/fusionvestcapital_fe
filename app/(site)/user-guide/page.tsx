@@ -14,7 +14,7 @@ export default function UserGuide() {
               User Guide
             </h1>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Everything you need to know to get started with copy trading on FUSIONVEST CAPITAL
+              Everything you need to know to get started with copy trading on FUSION VEST
             </p>
           </div>
           <div className="space-y-12">
@@ -24,9 +24,9 @@ export default function UserGuide() {
                 Getting Started
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Welcome to FUSIONVEST CAPITAL! This guide will walk you through everything you need to know
+                Welcome to FUSION VEST! This guide will walk you through everything you need to know
                 to start copy trading. Whether you are a complete beginner or an experienced trader
-                looking to diversify, FUSIONVEST CAPITAL makes it easy to follow top-performing traders and
+                looking to diversify, FUSION VEST makes it easy to follow top-performing traders and
                 replicate their success.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -43,7 +43,7 @@ export default function UserGuide() {
               <ol className="space-y-3 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start gap-3">
                   <span className="bg-[#000080] dark:bg-[#50C878] text-white dark:text-[#000025] rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold shrink-0">1</span>
-                  <span>Visit the FUSIONVEST CAPITAL registration page and enter your email address and a strong password</span>
+                  <span>Visit the FUSION VEST registration page and enter your email address and a strong password</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="bg-[#000080] dark:bg-[#50C878] text-white dark:text-[#000025] rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold shrink-0">2</span>
@@ -104,7 +104,7 @@ export default function UserGuide() {
                 Finding Traders to Copy
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                FUSIONVEST CAPITAL provides powerful tools to help you find the right traders to copy:
+                FUSION VEST provides powerful tools to help you find the right traders to copy:
               </p>
               <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start gap-3">
@@ -194,7 +194,7 @@ export default function UserGuide() {
                 Deposits and Withdrawals
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                FUSIONVEST CAPITAL supports multiple funding methods for your convenience:
+                FUSION VEST supports multiple funding methods for your convenience:
               </p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start gap-3">
@@ -254,7 +254,7 @@ export default function UserGuide() {
                 Getting Help
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                If you need assistance at any point, FUSIONVEST CAPITAL offers multiple support channels:
+                If you need assistance at any point, FUSION VEST offers multiple support channels:
               </p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start gap-3">
@@ -282,7 +282,7 @@ export default function UserGuide() {
                 Ready to Start Copy Trading?
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Create your FUSIONVEST CAPITAL account today and start copying top-performing traders.
+                Create your FUSION VEST account today and start copying top-performing traders.
                 It only takes a few minutes to get started.
               </p>
               <div className="flex flex-wrap gap-4">

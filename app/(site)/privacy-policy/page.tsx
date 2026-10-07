@@ -27,7 +27,7 @@ export default function PrivacyPolicy() {
                 1. Personal Information We Collect
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                FUSIONVEST CAPITAL is committed to protecting your privacy. This Privacy Policy
+                FUSION VEST is committed to protecting your privacy. This Privacy Policy
                 explains how we collect, use, disclose, and safeguard your information
                 when you use our platform and services. We collect the following types of
                 personal information:
@@ -37,7 +37,7 @@ export default function PrivacyPolicy() {
                 Application Information
               </h3>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                When you open an account with FUSIONVEST CAPITAL, we collect personal information
+                When you open an account with FUSION VEST, we collect personal information
                 such as your full name, date of birth, residential address, email address,
                 phone number, nationality, employment status, annual income, net worth,
                 and trading experience. This information is required to comply with
@@ -73,7 +73,7 @@ export default function PrivacyPolicy() {
                 2. Security Technology
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                FUSIONVEST CAPITAL employs industry-standard security measures to protect your
+                FUSION VEST employs industry-standard security measures to protect your
                 personal information from unauthorized access, alteration, disclosure, or
                 destruction. Our security measures include:
               </p>
@@ -109,7 +109,7 @@ export default function PrivacyPolicy() {
                 3. Sharing Information with Our Affiliates
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                FUSIONVEST CAPITAL may share your personal information with our affiliated
+                FUSION VEST may share your personal information with our affiliated
                 companies and subsidiaries for the purposes of providing and improving our
                 services, ensuring regulatory compliance across jurisdictions, conducting
                 internal analytics and research, and managing risk across our group of
@@ -158,7 +158,7 @@ export default function PrivacyPolicy() {
                 5. Regulatory Disclosure
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                FUSIONVEST CAPITAL may be required to disclose your personal information to
+                FUSION VEST may be required to disclose your personal information to
                 regulatory authorities, law enforcement agencies, or other governmental
                 bodies in response to lawful requests, subpoenas, court orders, or as
                 otherwise required by applicable law. We will only disclose the minimum

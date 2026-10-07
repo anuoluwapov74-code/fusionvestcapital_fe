@@ -2,7 +2,7 @@
 
 export const metadata: Metadata = {
   title: "Verify Email",
-  description: "Verify your email address to activate your FUSIONVEST CAPITAL account.",
+  description: "Verify your email address to activate your FUSION VEST account.",
 };
 
 export default function VerifyEmailLayout({ children }: { children: React.ReactNode }) {

@@ -21,14 +21,14 @@ export default function BrandLogo({
       {/* CSS-based theme switching — no JS / hydration flicker */}
       <Image
         src="/logo_light.png"
-        alt="FusionVest Capital"
+        alt="Fusion Vest"
         width={48}
         height={48}
         className={`${imageSize} object-contain shrink-0 dark:hidden`}
       />
       <Image
         src="/logo_dark.png"
-        alt="FusionVest Capital"
+        alt="Fusion Vest"
         width={48}
         height={48}
         className={`${imageSize} object-contain shrink-0 hidden dark:block`}
@@ -38,7 +38,7 @@ export default function BrandLogo({
           mobileImageOnly ? "hidden lg:inline" : ""
         }`}
       >
-        FusionVest<span className="text-[#000080] dark:text-[#50C878]">Capital</span>
+        Fusion <span className="text-[#50C878]">Vest</span>
       </span>
     </span>
   );

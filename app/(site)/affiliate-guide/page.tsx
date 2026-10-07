@@ -14,7 +14,7 @@ export default function AffiliateGuide() {
               Affiliate Guide
             </h1>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Everything you need to know to succeed as a FUSIONVEST CAPITAL affiliate
+              Everything you need to know to succeed as a FUSION VEST affiliate
             </p>
           </div>
           <div className="space-y-12">
@@ -24,7 +24,7 @@ export default function AffiliateGuide() {
                 Welcome to the Affiliate Program
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Thank you for joining the FUSIONVEST CAPITAL Affiliate Program. As an affiliate, you play a
+                Thank you for joining the FUSION VEST Affiliate Program. As an affiliate, you play a
                 crucial role in growing our community of traders. This guide will walk you through
                 everything you need to know — from setting up your account to maximizing your earnings.
               </p>
@@ -40,12 +40,12 @@ export default function AffiliateGuide() {
                 Getting Started
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Follow these steps to begin earning as a FUSIONVEST CAPITAL affiliate:
+                Follow these steps to begin earning as a FUSION VEST affiliate:
               </p>
               <ol className="space-y-4 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start gap-3">
                   <span className="bg-[#000080] dark:bg-[#50C878] text-white dark:text-[#000025] rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold shrink-0">1</span>
-                  <span><strong>Create your FUSIONVEST CAPITAL account</strong> — Sign up at FUSIONVEST CAPITAL and complete the verification process.</span>
+                  <span><strong>Create your FUSION VEST account</strong> — Sign up at FUSION VEST and complete the verification process.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="bg-[#000080] dark:bg-[#50C878] text-white dark:text-[#000025] rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold shrink-0">2</span>
@@ -95,10 +95,10 @@ export default function AffiliateGuide() {
             </section>
 
           
-            {/* Promoting FUSIONVEST CAPITAL */}
+            {/* Promoting FUSION VEST */}
             <section>
               <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Promoting FUSIONVEST CAPITAL
+                Promoting FUSION VEST
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 Here are some tips and best practices to maximize your referral earnings:
@@ -106,11 +106,11 @@ export default function AffiliateGuide() {
               <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start gap-3">
                   <span className="text-[#000080] dark:text-[#50C878] font-bold">&#10003;</span>
-                  <span><strong>Be authentic</strong> — Share your own experience with FUSIONVEST CAPITAL. Genuine recommendations convert better than generic pitches.</span>
+                  <span><strong>Be authentic</strong> — Share your own experience with FUSION VEST. Genuine recommendations convert better than generic pitches.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#000080] dark:text-[#50C878] font-bold">&#10003;</span>
-                  <span><strong>Educate your audience</strong> — Create content that explains how copy trading works and how FUSIONVEST CAPITAL makes it accessible.</span>
+                  <span><strong>Educate your audience</strong> — Create content that explains how copy trading works and how FUSION VEST makes it accessible.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#000080] dark:text-[#50C878] font-bold">&#10003;</span>
@@ -193,7 +193,7 @@ export default function AffiliateGuide() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#000080] dark:text-[#50C878] font-bold">&#8226;</span>
-                  <span>Withdraw via bank transfer, cryptocurrency, or to your FUSIONVEST CAPITAL trading account</span>
+                  <span>Withdraw via bank transfer, cryptocurrency, or to your FUSION VEST trading account</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#000080] dark:text-[#50C878] font-bold">&#8226;</span>
@@ -237,7 +237,7 @@ export default function AffiliateGuide() {
                 Ready to Start Earning?
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Join the FUSIONVEST CAPITAL Affiliate Program today and start earning commissions on every
+                Join the FUSION VEST Affiliate Program today and start earning commissions on every
                 referral. It only takes a few minutes to get set up.
               </p>
               <div className="flex flex-wrap gap-4">

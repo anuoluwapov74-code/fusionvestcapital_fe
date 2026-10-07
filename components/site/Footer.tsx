@@ -20,11 +20,11 @@ const Footer = () => {
           <div className="lg:col-span-3">
             <div className="mb-4">
               <span className="text-2xl font-bold tracking-tight">
-                FusionVest<span className="text-[#000080] dark:text-[#50C878]">Capital</span>
+                Fusion <span className="text-[#50C878]">Vest</span>
               </span>
             </div>
             <p className="mb-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-              Copy trade with FusionVest Capitals
+              Copy trade with Fusion Vest
             </p>
             {/* Social links */}
             <div className="flex gap-3">

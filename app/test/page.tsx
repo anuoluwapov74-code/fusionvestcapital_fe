@@ -195,7 +195,7 @@ const Hero = () => {
           <div className="absolute -inset-4 bg-[#50C878]/5 rounded-3xl blur-3xl pointer-events-none" />
           <Image
             src="/images/banner_image.png"
-            alt="FusionVest Capital Platform"
+            alt="Fusion Vest Platform"
             width={1536}
             height={1024}
             className="relative rounded-2xl object-contain hidden dark:block w-full"
@@ -203,7 +203,7 @@ const Hero = () => {
           />
           <Image
             src="/images/banner_image_light.png"
-            alt="FusionVest Capital Platform"
+            alt="Fusion Vest Platform"
             width={1536}
             height={1024}
             className="relative rounded-2xl object-contain block dark:hidden w-full"
@@ -332,7 +332,7 @@ const ProblemSolution = () => (
             <h3 className="text-2xl lg:text-3xl font-black mb-5">Beat the odds with Copy Trading</h3>
             <p className="text-base leading-relaxed text-gray-600 dark:text-gray-400 mb-10">
               Over 73% of investors generate profits by copying top leaders—especially in dynamic options markets.
-              With FusionVest Capital, you replicate successful trades from seasoned traders and tilt the odds in your favor.
+              With Fusion Vest, you replicate successful trades from seasoned traders and tilt the odds in your favor.
             </p>
             <Link
               href="/register"
@@ -565,7 +565,7 @@ const Features = () => (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16 lg:mb-20">
         <p className="text-sm font-black uppercase tracking-widest text-[#50C878] mb-3">Platform Features</p>
-        <h2 className="text-4xl lg:text-6xl font-black text-white">Why FusionVest Capital</h2>
+        <h2 className="text-4xl lg:text-6xl font-black text-white">Why Fusion Vest</h2>
         <p className="mt-5 text-lg text-white/40 max-w-2xl mx-auto">
           The most advanced copy trading platform with enterprise-grade security and lightning-fast execution.
         </p>
@@ -832,7 +832,7 @@ const FAQ = () => {
             <p className="text-sm font-black uppercase tracking-widest text-[#000080] dark:text-[#50C878] mb-3">FAQ</p>
             <h2 className="text-4xl lg:text-5xl font-black mb-6 leading-tight">Your Questions,<br />Answered</h2>
             <p className="text-lg text-gray-500 dark:text-gray-400 mb-10 leading-relaxed">
-              Everything you need to know about copy trading with FusionVest Capital.
+              Everything you need to know about copy trading with Fusion Vest.
             </p>
             <Link
               href="/register"

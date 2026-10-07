@@ -21,8 +21,8 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://fusionsvest.com"),
   title: {
-    default: "FUSIONVEST CAPITAL - Copy Futures, Options & Contracts with Precision",
-    template: "%s | FUSIONVEST CAPITAL",
+    default: "FUSION VEST - Copy Futures, Options & Contracts with Precision",
+    template: "%s | FUSION VEST",
   },
   description:
     "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     "options trading",
     "stock trading",
     "trade copying",
-    "FUSIONVEST CAPITAL",
+    "FUSION VEST",
   ],
   openGraph: {
     type: "website",
     url: "https://fusionsvest.com",
-    siteName: "FUSIONVEST CAPITAL",
-    title: "FUSIONVEST CAPITAL - Copy Futures, Options & Contracts with Precision",
+    siteName: "FUSION VEST",
+    title: "FUSION VEST - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
     images: [
@@ -46,13 +46,13 @@ export const metadata: Metadata = {
         url: "https://fusionsvest.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "FUSIONVEST CAPITAL - Social Copy Trading Platform",
+        alt: "FUSION VEST - Social Copy Trading Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "FUSIONVEST CAPITAL - Copy Futures, Options & Contracts with Precision",
+    title: "FUSION VEST - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
     images: ["https://fusionsvest.com/og-image.png"],

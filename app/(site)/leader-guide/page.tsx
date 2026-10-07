@@ -14,7 +14,7 @@ export default function LeaderGuide() {
               Leader Guide
             </h1>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Your complete guide to becoming a successful signal leader on FUSIONVEST CAPITAL
+              Your complete guide to becoming a successful signal leader on FUSION VEST
             </p>
           </div>
           <div className="space-y-12">
@@ -24,13 +24,13 @@ export default function LeaderGuide() {
                 What is a Leader?
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                A Leader on FUSIONVEST CAPITAL is an experienced trader who shares their trading signals with
+                A Leader on FUSION VEST is an experienced trader who shares their trading signals with
                 the community. When other users (followers) copy your trades, you earn commissions based
                 on their activity. As a Leader, your trading performance is publicly visible, and your
                 reputation grows as you demonstrate consistent results.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                Leaders are the backbone of the FUSIONVEST CAPITAL copy trading ecosystem. They provide the
+                Leaders are the backbone of the FUSION VEST copy trading ecosystem. They provide the
                 strategies and expertise that make copy trading possible for traders of all experience levels.
               </p>
             </section>
@@ -41,12 +41,12 @@ export default function LeaderGuide() {
                 Requirements to Become a Leader
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                To qualify as a Leader on FUSIONVEST CAPITAL, you must meet the following criteria:
+                To qualify as a Leader on FUSION VEST, you must meet the following criteria:
               </p>
               <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start gap-3">
                   <span className="text-[#000080] dark:text-[#50C878] font-bold">&#8226;</span>
-                  <span>A verified FUSIONVEST CAPITAL account with completed KYC</span>
+                  <span>A verified FUSION VEST account with completed KYC</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#000080] dark:text-[#50C878] font-bold">&#8226;</span>
@@ -73,7 +73,7 @@ export default function LeaderGuide() {
                 Setting Up Your Profile
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Your Leader profile is your public identity on FUSIONVEST CAPITAL. A well-crafted profile
+                Your Leader profile is your public identity on FUSION VEST. A well-crafted profile
                 attracts more followers and builds trust. Here is how to set it up:
               </p>
               <ol className="space-y-3 text-gray-700 dark:text-gray-300">
@@ -156,7 +156,7 @@ export default function LeaderGuide() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#000080] dark:text-[#50C878] font-bold">&#10003;</span>
-                  <span><strong>External promotion</strong> — Share your FUSIONVEST CAPITAL profile on social media and trading communities.</span>
+                  <span><strong>External promotion</strong> — Share your FUSION VEST profile on social media and trading communities.</span>
                 </li>
               </ul>
             </section>
@@ -167,7 +167,7 @@ export default function LeaderGuide() {
                 Earning as a Leader
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Leaders earn money through multiple channels on FUSIONVEST CAPITAL:
+                Leaders earn money through multiple channels on FUSION VEST:
               </p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start gap-3">
@@ -217,7 +217,7 @@ export default function LeaderGuide() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 As a Leader, responsible risk management is not just good practice — it is your
-                responsibility. Your followers trust you with their capital, and FUSIONVEST CAPITAL monitors
+                responsibility. Your followers trust you with their capital, and FUSION VEST monitors
                 leader behavior to protect the community.
               </p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
@@ -247,7 +247,7 @@ export default function LeaderGuide() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 Ready to share your trading expertise and earn from your skills? Apply to become
-                a FUSIONVEST CAPITAL Leader and start building your following today.
+                a FUSION VEST Leader and start building your following today.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/register" className="inline-block bg-[#000080] hover:bg-[#0000b3] dark:bg-[#50C878] dark:hover:bg-[#3ab060] text-white dark:text-[#000025] px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg shadow-[#000080]/30 dark:shadow-[#50C878]/30 hover:shadow-[#000080]/50 dark:hover:shadow-[#50C878]/50">
