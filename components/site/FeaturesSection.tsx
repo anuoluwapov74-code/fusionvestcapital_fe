@@ -74,7 +74,7 @@ const FeaturesSection = () => {
             Platform Features
           </p>
           <h2 className="text-3xl font-bold tracking-tight lg:text-4xl">
-            Why choose FUSION VEST
+            Why choose UPHOLD CAPITALS
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-gray-500 dark:text-gray-400 lg:text-base">
             The most advanced copy trading platform with enterprise-grade

@@ -27,7 +27,7 @@ export default function TermsOfService() {
                 1. Acceptance of Terms
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                By accessing or using the FUSION VEST platform, website, mobile applications, and any
+                By accessing or using the UPHOLD CAPITALS platform, website, mobile applications, and any
                 associated services (collectively, the &ldquo;Services&rdquo;), you acknowledge that you have
                 read, understood, and agree to be bound by these Terms of Service
                 (&ldquo;Terms&rdquo;). If you do not agree to these Terms, you must not access or use our
@@ -35,8 +35,8 @@ export default function TermsOfService() {
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 These Terms constitute a legally binding agreement between you
-                (&ldquo;User,&rdquo; &ldquo;you,&rdquo; or &ldquo;your&rdquo;) and FUSION VEST and its affiliated entities
-                (&ldquo;FUSION VEST,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). By using our Services, you
+                (&ldquo;User,&rdquo; &ldquo;you,&rdquo; or &ldquo;your&rdquo;) and UPHOLD CAPITALS and its affiliated entities
+                (&ldquo;UPHOLD CAPITALS,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). By using our Services, you
                 represent and warrant that you are at least 18 years of age and have the
                 legal capacity to enter into this agreement.
               </p>
@@ -56,13 +56,13 @@ export default function TermsOfService() {
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 You are solely responsible for maintaining the confidentiality of your
                 account credentials, including your username and password. You agree to
-                notify FUSION VEST immediately of any unauthorized use of your account or
-                any other breach of security. FUSION VEST will not be liable for any loss or
+                notify UPHOLD CAPITALS immediately of any unauthorized use of your account or
+                any other breach of security. UPHOLD CAPITALS will not be liable for any loss or
                 damage arising from your failure to protect your account information.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 You may not transfer, sell, or otherwise assign your account to any third
-                party without prior written consent from FUSION VEST. We reserve the right to
+                party without prior written consent from UPHOLD CAPITALS. We reserve the right to
                 suspend or terminate any account that we reasonably believe has been
                 compromised or is being used in violation of these Terms.
               </p>
@@ -74,7 +74,7 @@ export default function TermsOfService() {
                 3. Trading Services
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                FUSION VEST provides access to a range of financial trading services,
+                UPHOLD CAPITALS provides access to a range of financial trading services,
                 including but not limited to copy trading, futures trading, options trading,
                 and contracts for difference (CFDs). These services are provided on an
                 &ldquo;as available&rdquo; basis and may be subject to market conditions, regulatory
@@ -88,7 +88,7 @@ export default function TermsOfService() {
                 your behalf.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                FUSION VEST does not provide investment advice, and no content on our
+                UPHOLD CAPITALS does not provide investment advice, and no content on our
                 platform should be construed as such. All trading decisions are made at
                 your own discretion and risk. You should consult with a qualified financial
                 advisor before making any investment decisions.
@@ -109,7 +109,7 @@ export default function TermsOfService() {
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 The value of your investments can go down as well as up, and you should
-                only trade with funds you can afford to lose. FUSION VEST strongly recommends
+                only trade with funds you can afford to lose. UPHOLD CAPITALS strongly recommends
                 that you seek independent financial advice before engaging in any trading
                 activity on our platform. For full details, please review our{" "}
                 <Link
@@ -172,10 +172,10 @@ export default function TermsOfService() {
                 6. Intellectual Property
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                All content, features, and functionality of the FUSION VEST platform,
+                All content, features, and functionality of the UPHOLD CAPITALS platform,
                 including but not limited to text, graphics, logos, icons, images, audio
                 clips, digital downloads, data compilations, and software, are the
-                exclusive property of FUSION VEST or its licensors and are protected by
+                exclusive property of UPHOLD CAPITALS or its licensors and are protected by
                 international copyright, trademark, patent, and other intellectual
                 property laws.
               </p>
@@ -184,7 +184,7 @@ export default function TermsOfService() {
                 license to access and use the Services for personal, non-commercial
                 purposes. You may not reproduce, distribute, modify, create derivative
                 works from, publicly display, or otherwise exploit any content from the
-                platform without prior written permission from FUSION VEST.
+                platform without prior written permission from UPHOLD CAPITALS.
               </p>
             </section>
 
@@ -194,7 +194,7 @@ export default function TermsOfService() {
                 7. Limitation of Liability
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                To the fullest extent permitted by applicable law, FUSION VEST and its
+                To the fullest extent permitted by applicable law, UPHOLD CAPITALS and its
                 directors, officers, employees, agents, and affiliates shall not be liable
                 for any indirect, incidental, special, consequential, or punitive damages,
                 including but not limited to loss of profits, data, use, goodwill, or
@@ -202,12 +202,12 @@ export default function TermsOfService() {
                 inability to access or use) the Services.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                FUSION VEST shall not be liable for any losses arising from market
+                UPHOLD CAPITALS shall not be liable for any losses arising from market
                 volatility, system failures, third-party service interruptions, or any
                 other circumstances beyond our reasonable control. Our total aggregate
                 liability to you for any claims arising out of or relating to these Terms
                 or the Services shall not exceed the amount of fees paid by you to
-                FUSION VEST in the twelve (12) months preceding the claim.
+                UPHOLD CAPITALS in the twelve (12) months preceding the claim.
               </p>
             </section>
 
@@ -217,7 +217,7 @@ export default function TermsOfService() {
                 8. Termination
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                FUSION VEST reserves the right to suspend or terminate your access to the
+                UPHOLD CAPITALS reserves the right to suspend or terminate your access to the
                 Services at any time, with or without cause and with or without notice. You
                 may also terminate your account at any time by contacting our support
                 team.
@@ -237,7 +237,7 @@ export default function TermsOfService() {
                 9. Modifications to Terms
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                FUSION VEST reserves the right to modify these Terms at any time. We will
+                UPHOLD CAPITALS reserves the right to modify these Terms at any time. We will
                 notify you of any material changes by posting the updated Terms on our
                 website and updating the &ldquo;Last Updated&rdquo; date. Your continued use of the
                 Services after any changes to the Terms constitutes your acceptance of the
@@ -252,24 +252,24 @@ export default function TermsOfService() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 These Terms shall be governed by and construed in accordance with the laws
-                of the jurisdiction in which the applicable FUSION VEST entity is
+                of the jurisdiction in which the applicable UPHOLD CAPITALS entity is
                 incorporated, without regard to its conflict of law provisions.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                FUSION VEST operates through several regulated entities worldwide:
+                UPHOLD CAPITALS operates through several regulated entities worldwide:
               </p>
               <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed space-y-2">
                 <li>
-                  FUSION VEST (Europe) Ltd. authorised by CySEC under license #109/10
+                  UPHOLD CAPITALS (Europe) Ltd. authorised by CySEC under license #109/10
                 </li>
                 <li>
-                  FUSION VEST (UK) Ltd authorised by FCA under FRN 583263
+                  UPHOLD CAPITALS (UK) Ltd authorised by FCA under FRN 583263
                 </li>
                 <li>
-                  FUSION VEST (USA) Ltd authorised by SEC; CRD 298461
+                  UPHOLD CAPITALS (USA) Ltd authorised by SEC; CRD 298461
                 </li>
                 <li>
-                  FUSION VEST (ME) Limited licensed by ADGM&rsquo;s FSRA under Permission
+                  UPHOLD CAPITALS (ME) Limited licensed by ADGM&rsquo;s FSRA under Permission
                   Number 220073
                 </li>
               </ul>

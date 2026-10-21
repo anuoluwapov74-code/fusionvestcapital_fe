@@ -27,6 +27,6 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: "https://fusionsvest.com/sitemap.xml",
+    sitemap: "https://upholdcapitals.com/sitemap.xml",
   };
 }

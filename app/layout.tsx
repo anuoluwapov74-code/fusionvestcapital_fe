@@ -19,10 +19,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fusionsvest.com"),
+  metadataBase: new URL("https://upholdcapitals.com"),
   title: {
-    default: "FUSION VEST - Copy Futures, Options & Contracts with Precision",
-    template: "%s | FUSION VEST",
+    default: "UPHOLD CAPITALS - Copy Futures, Options & Contracts with Precision",
+    template: "%s | UPHOLD CAPITALS",
   },
   description:
     "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
@@ -32,30 +32,30 @@ export const metadata: Metadata = {
     "options trading",
     "stock trading",
     "trade copying",
-    "FUSION VEST",
+    "UPHOLD CAPITALS",
   ],
   openGraph: {
     type: "website",
-    url: "https://fusionsvest.com",
-    siteName: "FUSION VEST",
-    title: "FUSION VEST - Copy Futures, Options & Contracts with Precision",
+    url: "https://upholdcapitals.com",
+    siteName: "UPHOLD CAPITALS",
+    title: "UPHOLD CAPITALS - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
     images: [
       {
-        url: "https://fusionsvest.com/og-image.png",
+        url: "https://upholdcapitals.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "FUSION VEST - Social Copy Trading Platform",
+        alt: "UPHOLD CAPITALS - Social Copy Trading Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "FUSION VEST - Copy Futures, Options & Contracts with Precision",
+    title: "UPHOLD CAPITALS - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
-    images: ["https://fusionsvest.com/og-image.png"],
+    images: ["https://upholdcapitals.com/og-image.png"],
   },
   icons: {
     icon: [

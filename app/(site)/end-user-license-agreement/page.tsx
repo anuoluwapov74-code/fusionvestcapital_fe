@@ -28,8 +28,8 @@ export default function EndUserLicenseAgreement() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 This End User License Agreement (&ldquo;EULA&rdquo;) is a legal agreement between
-                you (&ldquo;User,&rdquo; &ldquo;you,&rdquo; or &ldquo;your&rdquo;) and FUSION VEST (&ldquo;Company,&rdquo; &ldquo;we,&rdquo;
-                &ldquo;us,&rdquo; or &ldquo;our&rdquo;) governing your use of the FUSION VEST software
+                you (&ldquo;User,&rdquo; &ldquo;you,&rdquo; or &ldquo;your&rdquo;) and UPHOLD CAPITALS (&ldquo;Company,&rdquo; &ldquo;we,&rdquo;
+                &ldquo;us,&rdquo; or &ldquo;our&rdquo;) governing your use of the UPHOLD CAPITALS software
                 applications, including our web platform, mobile applications, desktop
                 applications, APIs, and any related software and services (collectively,
                 the &ldquo;Software&rdquo;).
@@ -48,11 +48,11 @@ export default function EndUserLicenseAgreement() {
                 2. License Grant
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                Subject to the terms and conditions of this EULA, FUSION VEST grants you a
+                Subject to the terms and conditions of this EULA, UPHOLD CAPITALS grants you a
                 limited, non-exclusive, non-transferable, revocable license to download,
                 install, and use the Software on devices that you own or control, solely
                 for your personal, non-commercial use in connection with the trading
-                services provided by FUSION VEST. This license does not grant you any
+                services provided by UPHOLD CAPITALS. This license does not grant you any
                 ownership rights in the Software and is subject to the restrictions set
                 forth in this EULA.
               </p>
@@ -108,13 +108,13 @@ export default function EndUserLicenseAgreement() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 The Software and all copies thereof are the intellectual property of
-                FUSION VEST and are protected by copyright, trademark, patent, and other
-                intellectual property laws. FUSION VEST retains all right, title, and
+                UPHOLD CAPITALS and are protected by copyright, trademark, patent, and other
+                intellectual property laws. UPHOLD CAPITALS retains all right, title, and
                 interest in and to the Software, including all intellectual property
                 rights therein. This EULA does not convey to you any rights of ownership
                 in or related to the Software, and nothing in this EULA should be
                 construed as granting any license or right to use any trademarks, service
-                marks, or logos of FUSION VEST without prior written consent.
+                marks, or logos of UPHOLD CAPITALS without prior written consent.
               </p>
             </section>
 
@@ -124,11 +124,11 @@ export default function EndUserLicenseAgreement() {
                 5. Software Updates and Modifications
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                FUSION VEST may from time to time release updates, patches, bug fixes,
+                UPHOLD CAPITALS may from time to time release updates, patches, bug fixes,
                 enhancements, or new versions of the Software. Such updates may be
                 installed automatically or may require your action. You agree that
-                FUSION VEST may update the Software at its sole discretion, and you
-                acknowledge that this EULA applies to all such updates. FUSION VEST
+                UPHOLD CAPITALS may update the Software at its sole discretion, and you
+                acknowledge that this EULA applies to all such updates. UPHOLD CAPITALS
                 reserves the right to modify, suspend, or discontinue the Software or any
                 part thereof at any time without prior notice.
               </p>
@@ -163,11 +163,11 @@ export default function EndUserLicenseAgreement() {
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 The Software may include or integrate with third-party software
                 components, libraries, or services. Such third-party components are
-                subject to their own license agreements and terms of use. FUSION VEST does
+                subject to their own license agreements and terms of use. UPHOLD CAPITALS does
                 not assume any responsibility or liability for any third-party software or
                 services, and your use of such components is at your own risk. The
                 inclusion of third-party components does not imply endorsement by
-                FUSION VEST.
+                UPHOLD CAPITALS.
               </p>
             </section>
 
@@ -180,13 +180,13 @@ export default function EndUserLicenseAgreement() {
                 THE SOFTWARE IS PROVIDED &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; WITHOUT WARRANTY
                 OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
                 IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
-                TITLE, AND NON-INFRINGEMENT. FUSION VEST DOES NOT WARRANT THAT THE
+                TITLE, AND NON-INFRINGEMENT. UPHOLD CAPITALS DOES NOT WARRANT THAT THE
                 SOFTWARE WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR FREE OF VIRUSES
-                OR OTHER HARMFUL COMPONENTS. FUSION VEST DOES NOT WARRANT THE ACCURACY,
+                OR OTHER HARMFUL COMPONENTS. UPHOLD CAPITALS DOES NOT WARRANT THE ACCURACY,
                 COMPLETENESS, OR RELIABILITY OF ANY CONTENT, DATA, OR INFORMATION
                 PROVIDED THROUGH THE SOFTWARE. YOUR USE OF THE SOFTWARE IS AT YOUR SOLE
                 RISK. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED BY YOU
-                FROM FUSION VEST SHALL CREATE ANY WARRANTY NOT EXPRESSLY STATED IN THIS
+                FROM UPHOLD CAPITALS SHALL CREATE ANY WARRANTY NOT EXPRESSLY STATED IN THIS
                 EULA.
               </p>
             </section>
@@ -198,13 +198,13 @@ export default function EndUserLicenseAgreement() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed uppercase font-medium">
                 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL
-                FUSION VEST, ITS DIRECTORS, OFFICERS, EMPLOYEES, AGENTS, OR AFFILIATES BE
+                UPHOLD CAPITALS, ITS DIRECTORS, OFFICERS, EMPLOYEES, AGENTS, OR AFFILIATES BE
                 LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE
                 DAMAGES, INCLUDING BUT NOT LIMITED TO DAMAGES FOR LOSS OF PROFITS, DATA,
                 USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR IN
                 CONNECTION WITH YOUR USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF
-                FUSION VEST HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
-                FUSION VEST&rsquo;S TOTAL AGGREGATE LIABILITY TO YOU FOR ALL CLAIMS ARISING OUT
+                UPHOLD CAPITALS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+                UPHOLD CAPITALS&rsquo;S TOTAL AGGREGATE LIABILITY TO YOU FOR ALL CLAIMS ARISING OUT
                 OF OR RELATING TO THIS EULA OR THE SOFTWARE SHALL NOT EXCEED THE AMOUNT
                 PAID BY YOU, IF ANY, FOR THE SOFTWARE DURING THE TWELVE (12) MONTHS
                 PRECEDING THE CLAIM.
@@ -217,7 +217,7 @@ export default function EndUserLicenseAgreement() {
                 10. Indemnification
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                You agree to indemnify, defend, and hold harmless FUSION VEST, its
+                You agree to indemnify, defend, and hold harmless UPHOLD CAPITALS, its
                 directors, officers, employees, agents, and affiliates from and against
                 any and all claims, damages, losses, liabilities, costs, and expenses
                 (including reasonable attorneys&rsquo; fees) arising out of or in connection
@@ -233,7 +233,7 @@ export default function EndUserLicenseAgreement() {
                 11. Termination
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                This EULA is effective until terminated. FUSION VEST may terminate this
+                This EULA is effective until terminated. UPHOLD CAPITALS may terminate this
                 EULA at any time, with or without cause and with or without notice. You
                 may terminate this EULA at any time by uninstalling the Software and
                 deleting all copies from your devices.
@@ -273,7 +273,7 @@ export default function EndUserLicenseAgreement() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 This EULA shall be governed by and construed in accordance with the laws
-                of the jurisdiction in which the applicable FUSION VEST entity is
+                of the jurisdiction in which the applicable UPHOLD CAPITALS entity is
                 incorporated, without regard to its conflict of law provisions. Any
                 disputes arising out of or in connection with this EULA shall be submitted
                 to the exclusive jurisdiction of the courts in the relevant jurisdiction.
@@ -295,12 +295,12 @@ export default function EndUserLicenseAgreement() {
                 effect.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                This EULA constitutes the entire agreement between you and FUSION VEST
+                This EULA constitutes the entire agreement between you and UPHOLD CAPITALS
                 with respect to the Software and supersedes all prior or contemporaneous
                 communications, agreements, and understandings, whether oral or written,
-                between you and FUSION VEST regarding the subject matter hereof. No
+                between you and UPHOLD CAPITALS regarding the subject matter hereof. No
                 amendment or modification of this EULA shall be binding unless made in
-                writing and signed by an authorized representative of FUSION VEST.
+                writing and signed by an authorized representative of UPHOLD CAPITALS.
               </p>
             </section>
 
@@ -312,7 +312,7 @@ export default function EndUserLicenseAgreement() {
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 If you have any questions about this End User License Agreement, please
                 contact us at{" "}
-                <span className="text-[#000080] dark:text-[#50C878]">support@fusionsvest.com</span>. Our team
+                <span className="text-[#000080] dark:text-[#50C878]">support@upholdcapitals.com</span>. Our team
                 is available to assist you with any inquiries regarding your rights and
                 obligations under this agreement.
               </p>
