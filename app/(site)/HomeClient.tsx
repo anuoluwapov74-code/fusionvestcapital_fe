@@ -456,8 +456,8 @@ const ProblemSolution = () => (
             <h3 className="text-2xl lg:text-3xl font-black mb-5">Borrow the discipline, keep the upside</h3>
             <p className="text-base leading-relaxed text-gray-600 dark:text-gray-400 mb-10">
               73% of investors who copy a vetted leader land in the green — the strategy, sizing, and
-              timing are already proven. You bring the capital and the decision to follow; Uphold
-              Capitals handles the mirroring in real time.
+              timing are already proven. You bring the capital and the decision to follow;
+              UpholdTrades handles the mirroring in real time.
             </p>
             <Link
               href="/register"
