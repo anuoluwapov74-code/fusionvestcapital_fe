@@ -33,14 +33,14 @@ const leaderTabs = [
 
 const faqItems = [
   {
-    question: "Can anyone become an UPHOLD CAPITALS Leader?",
+    question: "Can anyone become an UPHOLDTRADES Leader?",
     answer:
-      "Yes, anyone with trading experience and a verified account can apply to become an UPHOLD CAPITALS Leader. We review all applications to ensure quality and consistency for our investors.",
+      "Yes, anyone with trading experience and a verified account can apply to become an UPHOLDTRADES Leader. We review all applications to ensure quality and consistency for our investors.",
   },
   {
-    question: "Can I become a Leader without being an UPHOLD CAPITALS?",
+    question: "Can I become a Leader without being an UPHOLDTRADES?",
     answer:
-      "You need to have an UPHOLD CAPITALS account to become a Leader. The registration process is quick and free, and you can apply for the Leaders Program as part of the signup process.",
+      "You need to have an UPHOLDTRADES account to become a Leader. The registration process is quick and free, and you can apply for the Leaders Program as part of the signup process.",
   },
   {
     question: "What are the general trading hours for all the instruments?",
@@ -53,15 +53,15 @@ const faqItems = [
       "Success as a Leader comes from consistent performance, responsible risk management, and active engagement with your followers. Focus on building a strong track record over time.",
   },
   {
-    question: "What are the charges for me as a new Leader with UPHOLD CAPITALS?",
+    question: "What are the charges for me as a new Leader with UPHOLDTRADES?",
     answer:
       "There are no charges to become a Leader. You only pay your regular trading costs. You earn commissions from investors who copy your trades — there are no hidden fees.",
   },
   {
     question:
-      "Is there a minimum amount for me to start trading with UPHOLD CAPITALS?",
+      "Is there a minimum amount for me to start trading with UPHOLDTRADES?",
     answer:
-      "The minimum deposit depends on the broker you choose to trade with. UPHOLD CAPITALS works with multiple regulated brokers, each with their own minimum requirements.",
+      "The minimum deposit depends on the broker you choose to trade with. UPHOLDTRADES works with multiple regulated brokers, each with their own minimum requirements.",
   },
 ];
 
@@ -85,11 +85,11 @@ export default function BecomeALeader() {
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Become a Leader with{" "}
               <span className="bg-linear-to-r from-[#000080] via-[#1a1aff] to-[#50C878] dark:from-[#50C878] dark:via-[#6de496] dark:to-[#a0ffc0] bg-clip-text text-transparent">
-                UPHOLD CAPITALS
+                UPHOLDTRADES
               </span>
             </h1>
             <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-8 max-w-2xl mx-auto text-sm lg:text-base">
-              UPHOLD CAPITALS is one of the most transparent social trading platforms
+              UPHOLDTRADES is one of the most transparent social trading platforms
               in the world, where our goal is to support investors and traders
               in their investment goals. Our Leader Program is open for
               individual traders who possess trading skills. Become a Leader
@@ -181,7 +181,7 @@ export default function BecomeALeader() {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                  Join UPHOLD CAPITALS as a Leader
+                  Join UPHOLDTRADES as a Leader
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                   Access the Leaders Program page and signup using our free form
@@ -298,7 +298,7 @@ export default function BecomeALeader() {
                   brokers trading multiple multiple shares in the Indices
                   brokers and markets trading securities. The free version that
                   is offered here in various capabilities including alerts that
-                  uses add to MT4 allowing to create views in the UPHOLD CAPITALS
+                  uses add to MT4 allowing to create views in the UPHOLDTRADES
                   network.
                 </p>
               </div>
@@ -329,7 +329,7 @@ export default function BecomeALeader() {
                   platform, designed for traders who want more sophisticated
                   tools and enhanced trading capabilities. MT5 offers advanced
                   trading functionality and expanded features while being one
-                  trading platform that takes place in the if UPHOLD CAPITALS&apos;s
+                  trading platform that takes place in the if UPHOLDTRADES&apos;s
                   trading pace on the live market live.
                 </p>
               </div>
@@ -414,7 +414,7 @@ export default function BecomeALeader() {
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white max-w-md leading-tight">
-                Reasons to Become a Leader with UPHOLD CAPITALS
+                Reasons to Become a Leader with UPHOLDTRADES
               </h2>
               <Link
                 href="/register"

@@ -2,7 +2,7 @@
 
 export const metadata: Metadata = {
   title: "Reset Password",
-  description: "Set a new password for your UPHOLD CAPITALS account.",
+  description: "Set a new password for your UPHOLDTRADES account.",
 };
 
 export default function ResetPasswordLayout({ children }: { children: React.ReactNode }) {

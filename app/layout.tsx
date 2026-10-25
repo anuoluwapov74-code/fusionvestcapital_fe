@@ -21,8 +21,8 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://upholdstrades.com"),
   title: {
-    default: "UPHOLD CAPITALS - Copy Futures, Options & Contracts with Precision",
-    template: "%s | UPHOLD CAPITALS",
+    default: "UPHOLDTRADES - Copy Futures, Options & Contracts with Precision",
+    template: "%s | UPHOLDTRADES",
   },
   description:
     "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     "options trading",
     "stock trading",
     "trade copying",
-    "UPHOLD CAPITALS",
+    "UPHOLDTRADES",
   ],
   openGraph: {
     type: "website",
     url: "https://upholdstrades.com",
-    siteName: "UPHOLD CAPITALS",
-    title: "UPHOLD CAPITALS - Copy Futures, Options & Contracts with Precision",
+    siteName: "UPHOLDTRADES",
+    title: "UPHOLDTRADES - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
     images: [
@@ -46,13 +46,13 @@ export const metadata: Metadata = {
         url: "https://upholdstrades.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "UPHOLD CAPITALS - Social Copy Trading Platform",
+        alt: "UPHOLDTRADES - Social Copy Trading Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "UPHOLD CAPITALS - Copy Futures, Options & Contracts with Precision",
+    title: "UPHOLDTRADES - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
     images: ["https://upholdstrades.com/og-image.png"],

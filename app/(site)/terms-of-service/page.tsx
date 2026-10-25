@@ -27,7 +27,7 @@ export default function TermsOfService() {
                 1. Acceptance of Terms
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                By accessing or using the UPHOLD CAPITALS platform, website, mobile applications, and any
+                By accessing or using the UPHOLDTRADES platform, website, mobile applications, and any
                 associated services (collectively, the &ldquo;Services&rdquo;), you acknowledge that you have
                 read, understood, and agree to be bound by these Terms of Service
                 (&ldquo;Terms&rdquo;). If you do not agree to these Terms, you must not access or use our
@@ -35,8 +35,8 @@ export default function TermsOfService() {
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 These Terms constitute a legally binding agreement between you
-                (&ldquo;User,&rdquo; &ldquo;you,&rdquo; or &ldquo;your&rdquo;) and UPHOLD CAPITALS and its affiliated entities
-                (&ldquo;UPHOLD CAPITALS,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). By using our Services, you
+                (&ldquo;User,&rdquo; &ldquo;you,&rdquo; or &ldquo;your&rdquo;) and UPHOLDTRADES and its affiliated entities
+                (&ldquo;UPHOLDTRADES,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). By using our Services, you
                 represent and warrant that you are at least 18 years of age and have the
                 legal capacity to enter into this agreement.
               </p>
@@ -56,13 +56,13 @@ export default function TermsOfService() {
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 You are solely responsible for maintaining the confidentiality of your
                 account credentials, including your username and password. You agree to
-                notify UPHOLD CAPITALS immediately of any unauthorized use of your account or
-                any other breach of security. UPHOLD CAPITALS will not be liable for any loss or
+                notify UPHOLDTRADES immediately of any unauthorized use of your account or
+                any other breach of security. UPHOLDTRADES will not be liable for any loss or
                 damage arising from your failure to protect your account information.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 You may not transfer, sell, or otherwise assign your account to any third
-                party without prior written consent from UPHOLD CAPITALS. We reserve the right to
+                party without prior written consent from UPHOLDTRADES. We reserve the right to
                 suspend or terminate any account that we reasonably believe has been
                 compromised or is being used in violation of these Terms.
               </p>
@@ -74,7 +74,7 @@ export default function TermsOfService() {
                 3. Trading Services
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                UPHOLD CAPITALS provides access to a range of financial trading services,
+                UPHOLDTRADES provides access to a range of financial trading services,
                 including but not limited to copy trading, futures trading, options trading,
                 and contracts for difference (CFDs). These services are provided on an
                 &ldquo;as available&rdquo; basis and may be subject to market conditions, regulatory
@@ -88,7 +88,7 @@ export default function TermsOfService() {
                 your behalf.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                UPHOLD CAPITALS does not provide investment advice, and no content on our
+                UPHOLDTRADES does not provide investment advice, and no content on our
                 platform should be construed as such. All trading decisions are made at
                 your own discretion and risk. You should consult with a qualified financial
                 advisor before making any investment decisions.
@@ -109,7 +109,7 @@ export default function TermsOfService() {
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 The value of your investments can go down as well as up, and you should
-                only trade with funds you can afford to lose. UPHOLD CAPITALS strongly recommends
+                only trade with funds you can afford to lose. UPHOLDTRADES strongly recommends
                 that you seek independent financial advice before engaging in any trading
                 activity on our platform. For full details, please review our{" "}
                 <Link
@@ -172,10 +172,10 @@ export default function TermsOfService() {
                 6. Intellectual Property
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                All content, features, and functionality of the UPHOLD CAPITALS platform,
+                All content, features, and functionality of the UPHOLDTRADES platform,
                 including but not limited to text, graphics, logos, icons, images, audio
                 clips, digital downloads, data compilations, and software, are the
-                exclusive property of UPHOLD CAPITALS or its licensors and are protected by
+                exclusive property of UPHOLDTRADES or its licensors and are protected by
                 international copyright, trademark, patent, and other intellectual
                 property laws.
               </p>
@@ -184,7 +184,7 @@ export default function TermsOfService() {
                 license to access and use the Services for personal, non-commercial
                 purposes. You may not reproduce, distribute, modify, create derivative
                 works from, publicly display, or otherwise exploit any content from the
-                platform without prior written permission from UPHOLD CAPITALS.
+                platform without prior written permission from UPHOLDTRADES.
               </p>
             </section>
 
@@ -194,7 +194,7 @@ export default function TermsOfService() {
                 7. Limitation of Liability
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                To the fullest extent permitted by applicable law, UPHOLD CAPITALS and its
+                To the fullest extent permitted by applicable law, UPHOLDTRADES and its
                 directors, officers, employees, agents, and affiliates shall not be liable
                 for any indirect, incidental, special, consequential, or punitive damages,
                 including but not limited to loss of profits, data, use, goodwill, or
@@ -202,12 +202,12 @@ export default function TermsOfService() {
                 inability to access or use) the Services.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                UPHOLD CAPITALS shall not be liable for any losses arising from market
+                UPHOLDTRADES shall not be liable for any losses arising from market
                 volatility, system failures, third-party service interruptions, or any
                 other circumstances beyond our reasonable control. Our total aggregate
                 liability to you for any claims arising out of or relating to these Terms
                 or the Services shall not exceed the amount of fees paid by you to
-                UPHOLD CAPITALS in the twelve (12) months preceding the claim.
+                UPHOLDTRADES in the twelve (12) months preceding the claim.
               </p>
             </section>
 
@@ -217,7 +217,7 @@ export default function TermsOfService() {
                 8. Termination
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                UPHOLD CAPITALS reserves the right to suspend or terminate your access to the
+                UPHOLDTRADES reserves the right to suspend or terminate your access to the
                 Services at any time, with or without cause and with or without notice. You
                 may also terminate your account at any time by contacting our support
                 team.
@@ -237,7 +237,7 @@ export default function TermsOfService() {
                 9. Modifications to Terms
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                UPHOLD CAPITALS reserves the right to modify these Terms at any time. We will
+                UPHOLDTRADES reserves the right to modify these Terms at any time. We will
                 notify you of any material changes by posting the updated Terms on our
                 website and updating the &ldquo;Last Updated&rdquo; date. Your continued use of the
                 Services after any changes to the Terms constitutes your acceptance of the
@@ -252,24 +252,24 @@ export default function TermsOfService() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 These Terms shall be governed by and construed in accordance with the laws
-                of the jurisdiction in which the applicable UPHOLD CAPITALS entity is
+                of the jurisdiction in which the applicable UPHOLDTRADES entity is
                 incorporated, without regard to its conflict of law provisions.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                UPHOLD CAPITALS operates through several regulated entities worldwide:
+                UPHOLDTRADES operates through several regulated entities worldwide:
               </p>
               <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed space-y-2">
                 <li>
-                  UPHOLD CAPITALS (Europe) Ltd. authorised by CySEC under license #109/10
+                  UPHOLDTRADES (Europe) Ltd. authorised by CySEC under license #109/10
                 </li>
                 <li>
-                  UPHOLD CAPITALS (UK) Ltd authorised by FCA under FRN 583263
+                  UPHOLDTRADES (UK) Ltd authorised by FCA under FRN 583263
                 </li>
                 <li>
-                  UPHOLD CAPITALS (USA) Ltd authorised by SEC; CRD 298461
+                  UPHOLDTRADES (USA) Ltd authorised by SEC; CRD 298461
                 </li>
                 <li>
-                  UPHOLD CAPITALS (ME) Limited licensed by ADGM&rsquo;s FSRA under Permission
+                  UPHOLDTRADES (ME) Limited licensed by ADGM&rsquo;s FSRA under Permission
                   Number 220073
                 </li>
               </ul>

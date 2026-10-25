@@ -21,29 +21,29 @@ export default function RiskDisclaimer() {
 
           {/* Content */}
           <div className="space-y-12">
-            {/* About UPHOLD CAPITALS */}
+            {/* About UPHOLDTRADES */}
             <section>
               <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                1. About UPHOLD CAPITALS
+                1. About UPHOLDTRADES
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                UPHOLD CAPITALS is a globally recognized financial services provider offering
+                UPHOLDTRADES is a globally recognized financial services provider offering
                 access to a wide range of trading instruments and investment services.
-                UPHOLD CAPITALS operates through several regulated entities across multiple
+                UPHOLDTRADES operates through several regulated entities across multiple
                 jurisdictions:
               </p>
               <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed space-y-2">
                 <li>
-                  UPHOLD CAPITALS (Europe) Ltd. authorised by CySEC under license #109/10
+                  UPHOLDTRADES (Europe) Ltd. authorised by CySEC under license #109/10
                 </li>
                 <li>
-                  UPHOLD CAPITALS (UK) Ltd authorised by FCA under FRN 583263
+                  UPHOLDTRADES (UK) Ltd authorised by FCA under FRN 583263
                 </li>
                 <li>
-                  UPHOLD CAPITALS (USA) Ltd authorised by SEC; CRD 298461
+                  UPHOLDTRADES (USA) Ltd authorised by SEC; CRD 298461
                 </li>
                 <li>
-                  UPHOLD CAPITALS (ME) Limited licensed by ADGM&rsquo;s FSRA under Permission
+                  UPHOLDTRADES (ME) Limited licensed by ADGM&rsquo;s FSRA under Permission
                   Number 220073
                 </li>
               </ul>
@@ -55,10 +55,10 @@ export default function RiskDisclaimer() {
                 2. Full Disclaimer
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                The information and services provided by UPHOLD CAPITALS are intended for
+                The information and services provided by UPHOLDTRADES are intended for
                 educational and informational purposes only and should not be construed as
                 investment advice, financial advice, trading advice, or any other type of
-                advice. UPHOLD CAPITALS does not recommend that any financial instrument should
+                advice. UPHOLDTRADES does not recommend that any financial instrument should
                 be bought, sold, or held by you.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -83,7 +83,7 @@ export default function RiskDisclaimer() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 Past performance is not necessarily indicative of future results. Any
-                performance data, statistics, or results presented on the UPHOLD CAPITALS
+                performance data, statistics, or results presented on the UPHOLDTRADES
                 platform are provided for informational purposes only and should not be
                 relied upon as a guarantee of future performance.
               </p>
@@ -156,19 +156,19 @@ export default function RiskDisclaimer() {
                 of losing your money.
               </p>
               <p className="text-red-800 dark:text-red-300 leading-relaxed mb-4">
-                The content on the UPHOLD CAPITALS platform is not directed at residents of any
+                The content on the UPHOLDTRADES platform is not directed at residents of any
                 country or jurisdiction where such distribution or use would be contrary
                 to local law or regulation. It is your responsibility to ensure that your
-                use of the UPHOLD CAPITALS platform complies with all applicable laws and
+                use of the UPHOLDTRADES platform complies with all applicable laws and
                 regulations in your jurisdiction.
               </p>
               <p className="text-red-800 dark:text-red-300 leading-relaxed">
-                UPHOLD CAPITALS does not accept liability for any loss or damage, including
+                UPHOLDTRADES does not accept liability for any loss or damage, including
                 without limitation any loss of profit, which may arise directly or
                 indirectly from use of or reliance on the information provided on our
                 platform. You are solely responsible for evaluating the merits and risks
                 associated with using any information, products, or services provided
-                through UPHOLD CAPITALS.
+                through UPHOLDTRADES.
               </p>
             </section>
 

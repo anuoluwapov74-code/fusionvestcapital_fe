@@ -28,8 +28,8 @@ export default function EndUserLicenseAgreement() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 This End User License Agreement (&ldquo;EULA&rdquo;) is a legal agreement between
-                you (&ldquo;User,&rdquo; &ldquo;you,&rdquo; or &ldquo;your&rdquo;) and UPHOLD CAPITALS (&ldquo;Company,&rdquo; &ldquo;we,&rdquo;
-                &ldquo;us,&rdquo; or &ldquo;our&rdquo;) governing your use of the UPHOLD CAPITALS software
+                you (&ldquo;User,&rdquo; &ldquo;you,&rdquo; or &ldquo;your&rdquo;) and UPHOLDTRADES (&ldquo;Company,&rdquo; &ldquo;we,&rdquo;
+                &ldquo;us,&rdquo; or &ldquo;our&rdquo;) governing your use of the UPHOLDTRADES software
                 applications, including our web platform, mobile applications, desktop
                 applications, APIs, and any related software and services (collectively,
                 the &ldquo;Software&rdquo;).
@@ -48,11 +48,11 @@ export default function EndUserLicenseAgreement() {
                 2. License Grant
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                Subject to the terms and conditions of this EULA, UPHOLD CAPITALS grants you a
+                Subject to the terms and conditions of this EULA, UPHOLDTRADES grants you a
                 limited, non-exclusive, non-transferable, revocable license to download,
                 install, and use the Software on devices that you own or control, solely
                 for your personal, non-commercial use in connection with the trading
-                services provided by UPHOLD CAPITALS. This license does not grant you any
+                services provided by UPHOLDTRADES. This license does not grant you any
                 ownership rights in the Software and is subject to the restrictions set
                 forth in this EULA.
               </p>
@@ -108,13 +108,13 @@ export default function EndUserLicenseAgreement() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 The Software and all copies thereof are the intellectual property of
-                UPHOLD CAPITALS and are protected by copyright, trademark, patent, and other
-                intellectual property laws. UPHOLD CAPITALS retains all right, title, and
+                UPHOLDTRADES and are protected by copyright, trademark, patent, and other
+                intellectual property laws. UPHOLDTRADES retains all right, title, and
                 interest in and to the Software, including all intellectual property
                 rights therein. This EULA does not convey to you any rights of ownership
                 in or related to the Software, and nothing in this EULA should be
                 construed as granting any license or right to use any trademarks, service
-                marks, or logos of UPHOLD CAPITALS without prior written consent.
+                marks, or logos of UPHOLDTRADES without prior written consent.
               </p>
             </section>
 
@@ -124,11 +124,11 @@ export default function EndUserLicenseAgreement() {
                 5. Software Updates and Modifications
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                UPHOLD CAPITALS may from time to time release updates, patches, bug fixes,
+                UPHOLDTRADES may from time to time release updates, patches, bug fixes,
                 enhancements, or new versions of the Software. Such updates may be
                 installed automatically or may require your action. You agree that
-                UPHOLD CAPITALS may update the Software at its sole discretion, and you
-                acknowledge that this EULA applies to all such updates. UPHOLD CAPITALS
+                UPHOLDTRADES may update the Software at its sole discretion, and you
+                acknowledge that this EULA applies to all such updates. UPHOLDTRADES
                 reserves the right to modify, suspend, or discontinue the Software or any
                 part thereof at any time without prior notice.
               </p>
@@ -163,11 +163,11 @@ export default function EndUserLicenseAgreement() {
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 The Software may include or integrate with third-party software
                 components, libraries, or services. Such third-party components are
-                subject to their own license agreements and terms of use. UPHOLD CAPITALS does
+                subject to their own license agreements and terms of use. UPHOLDTRADES does
                 not assume any responsibility or liability for any third-party software or
                 services, and your use of such components is at your own risk. The
                 inclusion of third-party components does not imply endorsement by
-                UPHOLD CAPITALS.
+                UPHOLDTRADES.
               </p>
             </section>
 
@@ -180,13 +180,13 @@ export default function EndUserLicenseAgreement() {
                 THE SOFTWARE IS PROVIDED &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; WITHOUT WARRANTY
                 OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
                 IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
-                TITLE, AND NON-INFRINGEMENT. UPHOLD CAPITALS DOES NOT WARRANT THAT THE
+                TITLE, AND NON-INFRINGEMENT. UPHOLDTRADES DOES NOT WARRANT THAT THE
                 SOFTWARE WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR FREE OF VIRUSES
-                OR OTHER HARMFUL COMPONENTS. UPHOLD CAPITALS DOES NOT WARRANT THE ACCURACY,
+                OR OTHER HARMFUL COMPONENTS. UPHOLDTRADES DOES NOT WARRANT THE ACCURACY,
                 COMPLETENESS, OR RELIABILITY OF ANY CONTENT, DATA, OR INFORMATION
                 PROVIDED THROUGH THE SOFTWARE. YOUR USE OF THE SOFTWARE IS AT YOUR SOLE
                 RISK. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED BY YOU
-                FROM UPHOLD CAPITALS SHALL CREATE ANY WARRANTY NOT EXPRESSLY STATED IN THIS
+                FROM UPHOLDTRADES SHALL CREATE ANY WARRANTY NOT EXPRESSLY STATED IN THIS
                 EULA.
               </p>
             </section>
@@ -198,13 +198,13 @@ export default function EndUserLicenseAgreement() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed uppercase font-medium">
                 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL
-                UPHOLD CAPITALS, ITS DIRECTORS, OFFICERS, EMPLOYEES, AGENTS, OR AFFILIATES BE
+                UPHOLDTRADES, ITS DIRECTORS, OFFICERS, EMPLOYEES, AGENTS, OR AFFILIATES BE
                 LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE
                 DAMAGES, INCLUDING BUT NOT LIMITED TO DAMAGES FOR LOSS OF PROFITS, DATA,
                 USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR IN
                 CONNECTION WITH YOUR USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF
-                UPHOLD CAPITALS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
-                UPHOLD CAPITALS&rsquo;S TOTAL AGGREGATE LIABILITY TO YOU FOR ALL CLAIMS ARISING OUT
+                UPHOLDTRADES HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+                UPHOLDTRADES&rsquo;S TOTAL AGGREGATE LIABILITY TO YOU FOR ALL CLAIMS ARISING OUT
                 OF OR RELATING TO THIS EULA OR THE SOFTWARE SHALL NOT EXCEED THE AMOUNT
                 PAID BY YOU, IF ANY, FOR THE SOFTWARE DURING THE TWELVE (12) MONTHS
                 PRECEDING THE CLAIM.
@@ -217,7 +217,7 @@ export default function EndUserLicenseAgreement() {
                 10. Indemnification
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                You agree to indemnify, defend, and hold harmless UPHOLD CAPITALS, its
+                You agree to indemnify, defend, and hold harmless UPHOLDTRADES, its
                 directors, officers, employees, agents, and affiliates from and against
                 any and all claims, damages, losses, liabilities, costs, and expenses
                 (including reasonable attorneys&rsquo; fees) arising out of or in connection
@@ -233,7 +233,7 @@ export default function EndUserLicenseAgreement() {
                 11. Termination
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                This EULA is effective until terminated. UPHOLD CAPITALS may terminate this
+                This EULA is effective until terminated. UPHOLDTRADES may terminate this
                 EULA at any time, with or without cause and with or without notice. You
                 may terminate this EULA at any time by uninstalling the Software and
                 deleting all copies from your devices.
@@ -273,7 +273,7 @@ export default function EndUserLicenseAgreement() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 This EULA shall be governed by and construed in accordance with the laws
-                of the jurisdiction in which the applicable UPHOLD CAPITALS entity is
+                of the jurisdiction in which the applicable UPHOLDTRADES entity is
                 incorporated, without regard to its conflict of law provisions. Any
                 disputes arising out of or in connection with this EULA shall be submitted
                 to the exclusive jurisdiction of the courts in the relevant jurisdiction.
@@ -295,12 +295,12 @@ export default function EndUserLicenseAgreement() {
                 effect.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                This EULA constitutes the entire agreement between you and UPHOLD CAPITALS
+                This EULA constitutes the entire agreement between you and UPHOLDTRADES
                 with respect to the Software and supersedes all prior or contemporaneous
                 communications, agreements, and understandings, whether oral or written,
-                between you and UPHOLD CAPITALS regarding the subject matter hereof. No
+                between you and UPHOLDTRADES regarding the subject matter hereof. No
                 amendment or modification of this EULA shall be binding unless made in
-                writing and signed by an authorized representative of UPHOLD CAPITALS.
+                writing and signed by an authorized representative of UPHOLDTRADES.
               </p>
             </section>
 

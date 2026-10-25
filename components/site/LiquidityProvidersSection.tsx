@@ -144,7 +144,7 @@ const LiquidityProvidersSection = () => {
             LIQUIDITY PROVIDERS
           </h2>
           <p className="text-white/80 text-base md:text-lg lg:text-xl">
-            UPHOLD CAPITALS currently has a variety of liquidity providers, including
+            UPHOLDTRADES currently has a variety of liquidity providers, including
             but not limited to:
           </p>
         </div>
