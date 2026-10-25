@@ -89,7 +89,7 @@ const Footer = () => {
                 title="CONTACT"
                 links={[
                   { label: "+1 (929) 512-0241", href: "#" },
-                  { label: "support@upholdcapitals.com", href: "mailto:support@upholdcapitals.com" },
+                  { label: "support@upholdstrades.com", href: "mailto:support@upholdstrades.com" },
                 ]}
               />
             </div>

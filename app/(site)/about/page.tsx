@@ -217,10 +217,10 @@ export default function AboutPage() {
                 Have questions about UPHOLD CAPITALS? We&apos;d love to hear from
                 you. Reach out to our team at{" "}
                 <a
-                  href="mailto:support@upholdcapitals.com"
+                  href="mailto:support@upholdstrades.com"
                   className="text-[#000080] dark:text-[#50C878] hover:text-[#0000b3] dark:hover:text-[#6de496] underline"
                 >
-                  support@upholdcapitals.com
+                  support@upholdstrades.com
                 </a>{" "}
                 or start a conversation through our live chat.
               </p>
