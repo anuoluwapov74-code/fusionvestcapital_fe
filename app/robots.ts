@@ -27,6 +27,6 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: "https://upholdstrades.com/sitemap.xml",
+    sitemap: "https://tradehivecapital.com/sitemap.xml",
   };
 }

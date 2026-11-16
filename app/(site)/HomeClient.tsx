@@ -457,7 +457,7 @@ const ProblemSolution = () => (
             <p className="text-base leading-relaxed text-gray-600 dark:text-gray-400 mb-10">
               73% of investors who copy a vetted leader land in the green — the strategy, sizing, and
               timing are already proven. You bring the capital and the decision to follow;
-              UpholdTrades handles the mirroring in real time.
+              TradeHiveCapital handles the mirroring in real time.
             </p>
             <Link
               href="/register"
@@ -974,7 +974,7 @@ const FEATURED_REVIEW = {
   name: "Marcus Villanueva",
   handle: "Copying since 2024 · Multi-leg options",
   stars: 5,
-  text: "Three months into copy trading with UpholdTrades and my returns have already beaten a full year of trading on my own. The transparency on every leg is what sold me — I can see exactly what I'm mirroring, every single time, down to the strike and the timestamp.",
+  text: "Three months into copy trading with TradeHiveCapital and my returns have already beaten a full year of trading on my own. The transparency on every leg is what sold me — I can see exactly what I'm mirroring, every single time, down to the strike and the timestamp.",
 };
 
 const SIDE_REVIEWS = [
@@ -1362,7 +1362,7 @@ export default function HomeClient() {
         <TopTraders />
         <Trust />
         <Testimonials />
-        <Team />
+        {/* <Team /> */}
         <LiquidityProvidersSection />
         <FAQ />
         <FinalCTA />

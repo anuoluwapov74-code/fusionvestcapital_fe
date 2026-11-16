@@ -19,10 +19,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://upholdstrades.com"),
+  metadataBase: new URL("https://tradehivecapital.com"),
   title: {
-    default: "UPHOLDTRADES - Copy Futures, Options & Contracts with Precision",
-    template: "%s | UPHOLDTRADES",
+    default: "TRADEHIVECAPITAL - Copy Futures, Options & Contracts with Precision",
+    template: "%s | TRADEHIVECAPITAL",
   },
   description:
     "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
@@ -32,30 +32,30 @@ export const metadata: Metadata = {
     "options trading",
     "stock trading",
     "trade copying",
-    "UPHOLDTRADES",
+    "TRADEHIVECAPITAL",
   ],
   openGraph: {
     type: "website",
-    url: "https://upholdstrades.com",
-    siteName: "UPHOLDTRADES",
-    title: "UPHOLDTRADES - Copy Futures, Options & Contracts with Precision",
+    url: "https://tradehivecapital.com",
+    siteName: "TRADEHIVECAPITAL",
+    title: "TRADEHIVECAPITAL - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
     images: [
       {
-        url: "https://upholdstrades.com/og-image.png",
+        url: "https://tradehivecapital.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "UPHOLDTRADES - Social Copy Trading Platform",
+        alt: "TRADEHIVECAPITAL - Social Copy Trading Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "UPHOLDTRADES - Copy Futures, Options & Contracts with Precision",
+    title: "TRADEHIVECAPITAL - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
-    images: ["https://upholdstrades.com/og-image.png"],
+    images: ["https://tradehivecapital.com/og-image.png"],
   },
   icons: {
     icon: [

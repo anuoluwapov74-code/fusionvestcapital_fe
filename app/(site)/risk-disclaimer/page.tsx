@@ -21,29 +21,29 @@ export default function RiskDisclaimer() {
 
           {/* Content */}
           <div className="space-y-12">
-            {/* About UPHOLDTRADES */}
+            {/* About TRADEHIVECAPITAL */}
             <section>
               <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                1. About UPHOLDTRADES
+                1. About TRADEHIVECAPITAL
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                UPHOLDTRADES is a globally recognized financial services provider offering
+                TRADEHIVECAPITAL is a globally recognized financial services provider offering
                 access to a wide range of trading instruments and investment services.
-                UPHOLDTRADES operates through several regulated entities across multiple
+                TRADEHIVECAPITAL operates through several regulated entities across multiple
                 jurisdictions:
               </p>
               <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed space-y-2">
                 <li>
-                  UPHOLDTRADES (Europe) Ltd. authorised by CySEC under license #109/10
+                  TRADEHIVECAPITAL (Europe) Ltd. authorised by CySEC under license #109/10
                 </li>
                 <li>
-                  UPHOLDTRADES (UK) Ltd authorised by FCA under FRN 583263
+                  TRADEHIVECAPITAL (UK) Ltd authorised by FCA under FRN 583263
                 </li>
                 <li>
-                  UPHOLDTRADES (USA) Ltd authorised by SEC; CRD 298461
+                  TRADEHIVECAPITAL (USA) Ltd authorised by SEC; CRD 298461
                 </li>
                 <li>
-                  UPHOLDTRADES (ME) Limited licensed by ADGM&rsquo;s FSRA under Permission
+                  TRADEHIVECAPITAL (ME) Limited licensed by ADGM&rsquo;s FSRA under Permission
                   Number 220073
                 </li>
               </ul>
@@ -55,10 +55,10 @@ export default function RiskDisclaimer() {
                 2. Full Disclaimer
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                The information and services provided by UPHOLDTRADES are intended for
+                The information and services provided by TRADEHIVECAPITAL are intended for
                 educational and informational purposes only and should not be construed as
                 investment advice, financial advice, trading advice, or any other type of
-                advice. UPHOLDTRADES does not recommend that any financial instrument should
+                advice. TRADEHIVECAPITAL does not recommend that any financial instrument should
                 be bought, sold, or held by you.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -83,7 +83,7 @@ export default function RiskDisclaimer() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 Past performance is not necessarily indicative of future results. Any
-                performance data, statistics, or results presented on the UPHOLDTRADES
+                performance data, statistics, or results presented on the TRADEHIVECAPITAL
                 platform are provided for informational purposes only and should not be
                 relied upon as a guarantee of future performance.
               </p>
@@ -156,19 +156,19 @@ export default function RiskDisclaimer() {
                 of losing your money.
               </p>
               <p className="text-red-800 dark:text-red-300 leading-relaxed mb-4">
-                The content on the UPHOLDTRADES platform is not directed at residents of any
+                The content on the TRADEHIVECAPITAL platform is not directed at residents of any
                 country or jurisdiction where such distribution or use would be contrary
                 to local law or regulation. It is your responsibility to ensure that your
-                use of the UPHOLDTRADES platform complies with all applicable laws and
+                use of the TRADEHIVECAPITAL platform complies with all applicable laws and
                 regulations in your jurisdiction.
               </p>
               <p className="text-red-800 dark:text-red-300 leading-relaxed">
-                UPHOLDTRADES does not accept liability for any loss or damage, including
+                TRADEHIVECAPITAL does not accept liability for any loss or damage, including
                 without limitation any loss of profit, which may arise directly or
                 indirectly from use of or reliance on the information provided on our
                 platform. You are solely responsible for evaluating the merits and risks
                 associated with using any information, products, or services provided
-                through UPHOLDTRADES.
+                through TRADEHIVECAPITAL.
               </p>
             </section>
 

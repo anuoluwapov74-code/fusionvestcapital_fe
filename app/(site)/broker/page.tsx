@@ -20,7 +20,7 @@ export default function BrokerPartnership() {
             </h1>
             <p className="mt-6 text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl mx-auto">
               You can be the first brokerage industry innovation. With
-              UPHOLDTRADES, alongside your Traders and restart your profits
+              TRADEHIVECAPITAL, alongside your Traders and restart your profits
               manifold.
             </p>
             <div className="mt-10">
@@ -340,7 +340,7 @@ export default function BrokerPartnership() {
             </h2>
             <p className="mt-5 text-gray-600 dark:text-gray-400 leading-relaxed">
               Join the leading brokers who have already partnered with
-              UPHOLDTRADES. Let&apos;s grow together.
+              TRADEHIVECAPITAL. Let&apos;s grow together.
             </p>
             <div className="mt-8">
               <Link
@@ -365,10 +365,10 @@ export default function BrokerPartnership() {
               hours.
             </p>
             <Link
-              href="mailto:partnerships@upholdstrades.com"
+              href="mailto:partnerships@tradehivecapital.com"
               className="text-[#000080] dark:text-[#50C878] hover:text-[#0000b3] dark:hover:text-[#6de496] font-medium transition"
             >
-              support@upholdstrades.com
+              support@tradehivecapital.com
             </Link>
           </div>
         </section>
